@@ -72,7 +72,9 @@
     expand-region
     js2-mode
     js2-refactor
-    move-text))
+    move-text
+    json-mode
+    web-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
