@@ -76,3 +76,6 @@
 ;; Delete region when typing
 (delete-selection-mode 1)
 
+;; Enable move-text
+(require 'move-text)
+(move-text-default-bindings)
