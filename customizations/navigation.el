@@ -68,6 +68,9 @@
       (append '("node_modules" "target")
               projectile-globally-ignored-directories))
 
+;; Require this package in order to be able to visit all marked files in dired mode
+(require 'dired-x)
+
 (global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
