@@ -180,48 +180,9 @@
 ;; Use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
-(delete-selection-mode 1)
-
-(setq mac-option-modifier nil
-      mac-command-modifier 'meta
-      x-select-enable-clipboard t)
-
-;; Remove newline at end of line as well as actual line
-;;(setq kill-whole-line t)
-
 ;; Prevent props to be commented out by quotes
 (add-hook 'conf-javaprop-mode-hook 
           '(lambda () (conf-quote-normal nil)))
-
-
-;; Duplicate current line
-(defun duplicate-current-line-or-region (arg)
-  "Duplicates the current line or region ARG times.
-If there's no region, the current line will be duplicated. However, if
-there's a region, all lines that region covers will be duplicated."
-  (interactive "p")
-  (let (beg end (origin (point)))
-    (if (and mark-active (> (point) (mark)))
-        (exchange-point-and-mark))
-    (setq beg (line-beginning-position))
-    (if mark-active
-        (exchange-point-and-mark))
-    (setq end (line-end-position))
-    (let ((region (buffer-substring-no-properties beg end)))
-      (dotimes (i arg)
-        (goto-char end)
-        (newline)
-        (insert region)
-        (setq end (point)))
-      (goto-char (+ origin (* (length region) arg) arg)))))
-
-
-;; Bind duplicate line to C-c d
-(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
-
-;; Require and bind move-text. Allows text to be moved with M-up and M-down
-;;(require 'move-text)
-(move-text-default-bindings)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
