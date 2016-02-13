@@ -68,13 +68,22 @@
     ;; git integration
     magit
 
+    ;; more packages
     ace-jump-mode
+    dired-details
     expand-region
+    flycheck
+    guide-key
+    ido-at-point
+    ido-vertical-mode
     js2-mode
     js2-refactor
     move-text
-    json-mode
-    web-mode))
+    multiple-cursors
+    nodejs-repl
+    smartparens
+    whole-line-or-region
+    yasnippet))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -104,7 +113,6 @@
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
-
 
 ;;;;
 ;; Customization
