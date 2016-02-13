@@ -64,6 +64,10 @@
 ;; projectile everywhere!
 (projectile-global-mode)
 
+(setq projectile-globally-ignored-directories
+      (append '("node_modules" "target")
+              projectile-globally-ignored-directories))
+
 (global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
