@@ -52,7 +52,7 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
 ;; yay rainbows!
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; use 2 spaces for tabs
 (defun die-tabs ()
@@ -70,3 +70,9 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+;; (global-flycheck-mode)
+
+;; Delete region when typing
+(delete-selection-mode 1)
+
