@@ -160,10 +160,6 @@
  '(custom-safe-themes (quote ("5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" "75c0b1d2528f1bce72f53344939da57e290aa34bea79f3a1ee19d6808cb55149" "1157a4055504672be1df1232bed784ba575c60ab44d8e6c7b3800ae76b42f8bd" default)))
  '(fci-rule-color "#2a2a2a"))
 
-;;(setq url-proxy-services '(("http" . "proxy1.klp.no:80")))
-
-
-
 ;; Setup ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (define-key global-map (kbd "C-,") 'ace-jump-char-mode)
