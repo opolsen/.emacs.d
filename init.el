@@ -166,6 +166,7 @@
 (define-key global-map (kbd "C-,") 'ace-jump-char-mode)
 
 ;; Setup expand-region
+(require 'expand-region)
 (global-set-key (kbd "C-æ") 'er/expand-region)
 
 ;; Use json-mode for .json files
