@@ -1,3 +1,6 @@
+;; Prefer utf-8 encoding
+(prefer-coding-system 'utf-8)
+
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
 
