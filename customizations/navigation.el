@@ -65,7 +65,7 @@
 (projectile-global-mode)
 
 (setq projectile-globally-ignored-directories
-      (append '("node_modules" "target")
+      (append '("node_modules" "target" ".tmp" "dist")
               projectile-globally-ignored-directories))
 
 ;; Require this package in order to be able to visit all marked files in dired mode
