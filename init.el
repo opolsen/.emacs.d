@@ -83,7 +83,8 @@
     nodejs-repl
     smartparens
     whole-line-or-region
-    yasnippet))
+    yasnippet
+    json-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
