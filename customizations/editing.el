@@ -79,3 +79,8 @@
 ;; Enable move-text
 (require 'move-text)
 (move-text-default-bindings)
+
+(require 'smartparens-config)
+(add-hook 'js-mode-hook #'smartparens-mode)
+(add-hook 'web-mode-hook #'smartparens-mode)
+(add-hook 'json-mode-hook #'smartparens-mode)
