@@ -79,3 +79,6 @@
 ;; Enable move-text
 (require 'move-text)
 (move-text-default-bindings)
+
+;; Indent after newline
+(define-key global-map (kbd "RET") 'newline-and-indent)
