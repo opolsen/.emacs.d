@@ -92,3 +92,6 @@
   (interactive)
   (indent-region (point-min) (point-max)))
 (global-set-key (kbd "C-c <tab>") 'indent-buffer)
+
+;; Automatically update unmodified buffers whose files have changed.
+(global-auto-revert-mode 1)
