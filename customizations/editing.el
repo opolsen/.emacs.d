@@ -95,3 +95,8 @@
 
 ;; Automatically update unmodified buffers whose files have changed.
 (global-auto-revert-mode 1)
+
+(require 'smartparens-config)
+(add-hook 'js-mode-hook #'smartparens-mode)
+(add-hook 'web-mode-hook #'smartparens-mode)
+(add-hook 'json-mode-hook #'smartparens-mode)
