@@ -50,6 +50,10 @@
 (require 'ido-vertical-mode)
 (ido-vertical-mode 1)
 
+;; Use ido for completion-at-point
+(require 'ido-at-point)
+(ido-at-point-mode)
+
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
