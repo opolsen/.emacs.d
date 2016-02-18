@@ -82,3 +82,8 @@
 
 ;; Indent after newline
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; Keep the whitespace clean
+(setq mode-require-final-newline nil)
+(require 'ethan-wspace)
+(global-ethan-wspace-mode 1)

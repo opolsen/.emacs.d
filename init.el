@@ -85,7 +85,8 @@
     whole-line-or-region
     yasnippet
     json-mode
-    web-mode))
+    web-mode
+    ethan-wspace))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
