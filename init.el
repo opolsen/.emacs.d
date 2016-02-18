@@ -112,7 +112,7 @@
 ;;
 ;; (require 'yaml-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;; 
+;;
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
@@ -184,7 +184,7 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
 ;; Prevent props to be commented out by quotes
-(add-hook 'conf-javaprop-mode-hook 
+(add-hook 'conf-javaprop-mode-hook
           '(lambda () (conf-quote-normal nil)))
 
 (custom-set-faces
