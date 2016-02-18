@@ -65,3 +65,6 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+
+;; Always start emacs in fullscreen
+(set-frame-parameter nil 'fullscreen 'maximized)
