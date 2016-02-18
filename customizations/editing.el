@@ -87,3 +87,8 @@
 (setq mode-require-final-newline nil)
 (require 'ethan-wspace)
 (global-ethan-wspace-mode 1)
+
+(defun indent-buffer ()
+  (interactive)
+  (indent-region (point-min) (point-max)))
+(global-set-key (kbd "C-c <tab>") 'indent-buffer)
