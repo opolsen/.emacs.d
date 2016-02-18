@@ -1,11 +1,23 @@
 ;; javascript / html
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+;; Activate subword-mode
 (add-hook 'js-mode-hook 'subword-mode)
 (add-hook 'html-mode-hook 'subword-mode)
-(require 'js2-refactor)
+
+;; Setup js2-refactor-mode
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
 (js2r-add-keybindings-with-prefix "C-c C-m")
-(setq js-indent-level 2)
+
+;; Set indentation level
+(setq-default js2-basic-offset 2)
+(setq-default js-indent-level 2)
+(setq-default web-mode-markup-indent-offset 2
+              web-mode-css-indent-offset 2
+              web-mode-code-indent-offset 2
+              web-mode-style-padding 2
+              web-mode-script-padding 2)
+
 (eval-after-load "sgml-mode"
   '(progn
      (require 'tagedit)
