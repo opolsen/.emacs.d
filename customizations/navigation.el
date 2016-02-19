@@ -82,3 +82,6 @@
 (require 'guide-key)
 (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c p"))
 (guide-key-mode 1)
+
+;; Quickly revert buffer with F5
+(global-set-key (kbd "<f5>") 'revert-buffer)
