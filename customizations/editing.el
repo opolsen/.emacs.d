@@ -110,3 +110,8 @@
 ;; Setup expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-æ") 'er/expand-region)
+
+(global-set-key (kbd "M-j")
+            (lambda ()
+                  (interactive)
+                  (join-line -1)))
