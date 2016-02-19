@@ -75,10 +75,12 @@
 ;; Require this package in order to be able to visit all marked files in dired mode
 (require 'dired-x)
 
+
 (global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 
+;; Displays the available key bindings after opening sequence
 (require 'guide-key)
 (setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c p"))
 (guide-key-mode 1)

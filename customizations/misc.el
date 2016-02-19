@@ -18,3 +18,6 @@
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
+;; Prevent props to be commented out by quotes
+(add-hook 'conf-javaprop-mode-hook
+          '(lambda () (conf-quote-normal nil)))

@@ -11,14 +11,6 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
 
-;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
-;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
-
-
-;; Load and activate emacs packages. Do this first so that the
-;; packages are loaded before you start trying to modify them.
-;; This also sets the load path.
 (package-initialize)
 
 ;; Download the ELPA archive description if needed.
@@ -167,25 +159,6 @@
    (quote
     ("6ebb2401451dc6d01cd761eef8fe24812a57793c5ccc427b600893fa1d767b1d" "20e359ef1818a838aff271a72f0f689f5551a27704bf1c9469a5c2657b417e6c" "5ee12d8250b0952deefc88814cf0672327d7ee70b16344372db9460e9a0e3ffc" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" "75c0b1d2528f1bce72f53344939da57e290aa34bea79f3a1ee19d6808cb55149" "1157a4055504672be1df1232bed784ba575c60ab44d8e6c7b3800ae76b42f8bd" default)))
  '(fci-rule-color "#2a2a2a"))
-
-;; Setup ace-jump-mode
-(require 'ace-jump-mode)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-(define-key global-map (kbd "C-,") 'ace-jump-char-mode)
-
-;; Setup expand-region
-(require 'expand-region)
-(global-set-key (kbd "C-æ") 'er/expand-region)
-
-;; Use json-mode for .json files
-(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
-
-;; Use web-mode for .jsx files
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
-
-;; Prevent props to be commented out by quotes
-(add-hook 'conf-javaprop-mode-hook
-          '(lambda () (conf-quote-normal nil)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -18,6 +18,18 @@
               web-mode-style-padding 2
               web-mode-script-padding 2)
 
+;; Use web-mode for .jsx files
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+
+;; Use json-mode for .json files
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
+
+;; Use smartparens
+(require 'smartparens-config)
+(add-hook 'js-mode-hook #'smartparens-mode)
+(add-hook 'web-mode-hook #'smartparens-mode)
+(add-hook 'json-mode-hook #'smartparens-mode)
+
 (eval-after-load "sgml-mode"
   '(progn
      (require 'tagedit)

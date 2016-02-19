@@ -97,12 +97,16 @@
 ;; Automatically update unmodified buffers whose files have changed.
 (global-auto-revert-mode 1)
 
-(require 'smartparens-config)
-(add-hook 'js-mode-hook #'smartparens-mode)
-(add-hook 'web-mode-hook #'smartparens-mode)
-(add-hook 'json-mode-hook #'smartparens-mode)
-
 ;; Keybindings for multiple-cursors
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; Setup ace-jump-mode
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(define-key global-map (kbd "C-ø") 'ace-jump-char-mode)
+
+;; Setup expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-æ") 'er/expand-region)
