@@ -78,7 +78,8 @@
 
 ;; Enable move-text
 (require 'move-text)
-(move-text-default-bindings)
+(global-set-key (kbd "C-S-n") 'move-text-down)
+(global-set-key (kbd "C-S-p") 'move-text-up)
 
 ;; Indent after newline
 (define-key global-map (kbd "RET") 'newline-and-indent)
