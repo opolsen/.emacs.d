@@ -29,6 +29,9 @@
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 100 :family "Source Code Pro Medium")
 
+(if (eq system-type 'darwin)
+    (set-face-attribute 'default nil :height 120))
+
 ;; These settings relate to how emacs interacts with your operating system
 (setq ;; makes killing/yanking interact with the clipboard
       x-select-enable-clipboard t
