@@ -18,6 +18,14 @@
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
+;; Norwegian mac-keyboard alt-keys
+(define-key key-translation-map (kbd "s-8") (kbd "["))
+(define-key key-translation-map (kbd "s-(") (kbd "{"))
+(define-key key-translation-map (kbd "s-9") (kbd "]"))
+(define-key key-translation-map (kbd "s-)") (kbd "}"))
+(define-key key-translation-map (kbd "s-7") (kbd "|"))
+(define-key key-translation-map (kbd "s-/") (kbd "\\"))
+
 ;; Prevent props to be commented out by quotes
 (add-hook 'conf-javaprop-mode-hook
           '(lambda () (conf-quote-normal nil)))
