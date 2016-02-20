@@ -14,7 +14,7 @@
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
 
-(setq mac-option-modifier nil
+(setq mac-option-modifier 'super
       mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
