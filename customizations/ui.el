@@ -73,5 +73,3 @@
         (setq mode-name ,new-name))))
 
 (rename-modeline "js2-mode" js2-mode "JS2")
-
-(set-default-font "Source Code Pro Medium")
