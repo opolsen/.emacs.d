@@ -76,6 +76,9 @@
 ;; Delete region when typing
 (delete-selection-mode 1)
 
+(require 'yasnippet)
+(yas-global-mode 1)
+
 ;; Enable move-text
 (require 'move-text)
 (global-set-key (kbd "C-S-n") 'move-text-down)
