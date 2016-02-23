@@ -78,6 +78,8 @@
 
 (require 'yasnippet)
 (yas-global-mode 1)
+;; Only use local snippets for now
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 
 ;; Enable move-text
 (require 'move-text)
