@@ -73,3 +73,6 @@
         (setq mode-name ,new-name))))
 
 (rename-modeline "js2-mode" js2-mode "JS2")
+
+;; Prevent smartparens overlay, since it makes content unreadable with current color scheme
+(setq sp-highlight-pair-overlay nil)
