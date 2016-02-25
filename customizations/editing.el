@@ -50,6 +50,7 @@
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
+(global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 
 ;; yay rainbows!
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
@@ -81,10 +82,17 @@
 ;; Only use local snippets for now
 (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 
+;; Expansions
+(global-set-key (kbd "C-,") 'completion-at-point)
+(global-set-key (kbd "C-.") 'hippie-expand)
+
 ;; Enable move-text
 (require 'move-text)
-(global-set-key (kbd "C-S-n") 'move-text-down)
 (global-set-key (kbd "C-S-p") 'move-text-up)
+(global-set-key (kbd "C-S-n") 'move-text-down)
+
+;; Keybinding for occur
+(global-set-key (kbd "C-c o") 'occur)
 
 ;; Indent after newline
 (define-key global-map (kbd "RET") 'newline-and-indent)
@@ -93,6 +101,7 @@
 (setq mode-require-final-newline nil)
 (require 'ethan-wspace)
 (global-ethan-wspace-mode 1)
+(global-set-key (kbd "C-c w") 'ethan-wspace-clean-all)
 
 (defun indent-buffer ()
   (interactive)
