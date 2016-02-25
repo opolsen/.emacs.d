@@ -9,6 +9,7 @@
       '(try-expand-dabbrev
         try-expand-dabbrev-all-buffers
         try-expand-dabbrev-from-kill
+        try-expand-all-abbrevs
         try-complete-lisp-symbol-partially
         try-complete-lisp-symbol))
 
