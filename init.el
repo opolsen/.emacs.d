@@ -78,7 +78,8 @@
     yasnippet
     json-mode
     web-mode
-    ethan-wspace))
+    ethan-wspace
+    color-theme-sanityinc-tomorrow))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
