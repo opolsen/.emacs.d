@@ -76,3 +76,10 @@
 
 ;; Prevent smartparens overlay, since it makes content unreadable with current color scheme
 (setq sp-highlight-pair-overlay nil)
+
+;; Show line and column
+(setq line-number-mode t)
+(setq column-number-mode t)
+
+;; Prevent line breaking
+(setq-default truncate-lines t)
