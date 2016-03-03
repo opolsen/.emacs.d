@@ -196,3 +196,10 @@
           (add-to-list 'name-and-pos (cons name position))))))))
 
 (global-set-key (kbd "M-i") 'ido-goto-symbol)
+
+;; Smartparens keybindings.
+;; Mostly taken from the author: https://github.com/Fuco1/.emacs.d/blob/master/files/smartparens.el
+(define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
+(define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
+(define-key smartparens-mode-map (kbd "C-M-<left>") 'sp-backward-slurp-sexp)
+(define-key smartparens-mode-map (kbd "C-M-<right>") 'sp-backward-barf-sexp)
