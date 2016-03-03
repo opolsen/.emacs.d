@@ -79,7 +79,8 @@
     json-mode
     web-mode
     ethan-wspace
-    color-theme-sanityinc-tomorrow))
+    color-theme-sanityinc-tomorrow
+    smooth-scroll))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
