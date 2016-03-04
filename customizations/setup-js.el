@@ -22,6 +22,11 @@
 ;; Use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
+;; Use jsx as default content-type
+(defun my-web-mode-hook ()
+  (web-mode-set-content-type "jsx"))
+(add-hook 'web-mode-hook 'my-web-mode-hook)
+
 ;; Use json-mode for .json files
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
