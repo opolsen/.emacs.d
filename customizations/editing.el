@@ -130,10 +130,12 @@
 (require 'expand-region)
 (global-set-key (kbd "C-æ") 'er/expand-region)
 
-(global-set-key (kbd "M-j")
-                (lambda ()
-                  (interactive)
-                  (join-line -1)))
+;; Join next line with current line
+(defun join-line-backwards ()
+  (interactive)
+  (join-line -1))
+(global-set-key (kbd "M-j") 'join-line-backwards)
+(define-key js2-mode-map (kbd "M-j") 'join-line-backwards)
 
 (defun open-line-below ()
   (interactive)
