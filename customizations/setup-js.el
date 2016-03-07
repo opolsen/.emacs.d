@@ -2,6 +2,15 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-hook 'js2-mode-hook 'js2-imenu-extras-mode)
 
+(setq js2-highlight-level 3)
+
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (define-key js2-mode-map (kbd "M-j")
+              (lambda ()
+                (interactive)
+                (join-line -1)))))
+
 ;; Activate subword-mode
 (add-hook 'js-mode-hook 'subword-mode)
 (add-hook 'html-mode-hook 'subword-mode)
