@@ -80,7 +80,8 @@
     web-mode
     ethan-wspace
     color-theme-sanityinc-tomorrow
-    smooth-scroll))
+    smooth-scroll
+    dash))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
