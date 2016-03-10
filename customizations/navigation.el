@@ -85,6 +85,13 @@
 (require 'which-key)
 (which-key-mode)
 
+;; Try to get a bit smoother scrolling
+(setq scroll-margin 0
+      scroll-conservatively 100000
+      scroll-up-aggressively 0.0
+      scroll-down-aggressively 0.0
+      scroll-preserve-screen-position t)
+
 ;; Quickly revert buffer with F5
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
