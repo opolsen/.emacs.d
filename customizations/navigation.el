@@ -113,3 +113,5 @@
   (if (find-file (ido-completing-read "Find recent file: " recentf-list))
       (message "Opening file...")
     (message "Aborting")))
+
+(global-set-key (kbd "C-c g") #'magit-status)
