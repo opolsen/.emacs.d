@@ -82,9 +82,8 @@
 (global-set-key (kbd "<end>") 'end-of-buffer)
 
 ;; Displays the available key bindings after opening sequence
-(require 'guide-key)
-(setq guide-key/guide-key-sequence '("C-x r" "C-x 4" "C-c p"))
-(guide-key-mode 1)
+(require 'which-key)
+(which-key-mode)
 
 ;; Quickly revert buffer with F5
 (global-set-key (kbd "<f5>") 'revert-buffer)

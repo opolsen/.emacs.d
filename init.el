@@ -66,6 +66,7 @@
     expand-region
     flycheck
     guide-key
+    which-key
     ido-at-point
     ido-vertical-mode
     js2-mode
