@@ -65,6 +65,8 @@
     dired-details
     expand-region
     flycheck
+    flycheck-post-tip
+    flycheck-clojure
     guide-key
     which-key
     ido-at-point
@@ -112,6 +114,11 @@
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
+
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
+
+(add-to-list 'load-path site-lisp-dir)
 
 ;;;;
 ;; Customization
