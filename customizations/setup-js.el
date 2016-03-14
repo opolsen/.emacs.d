@@ -5,11 +5,15 @@
 (setq js2-highlight-level 3)
 
 (add-hook 'js2-mode-hook
-          (lambda ()
+          (defun my-js2-mode-hook ()
+            (flycheck-mode t)
+            (when (executable-find "eslint")
+              (flycheck-select-checker 'javascript-eslint))
             (define-key js2-mode-map (kbd "M-j")
               (lambda ()
                 (interactive)
-                (join-line -1)))))
+                (join-line -1)))
+            ))
 
 ;; Activate subword-mode
 (add-hook 'js-mode-hook 'subword-mode)
@@ -33,7 +37,10 @@
 
 ;; Use jsx as default content-type
 (defun my-web-mode-hook ()
-  (web-mode-set-content-type "jsx"))
+  (web-mode-set-content-type "jsx")
+  (flycheck-mode t)
+  (when (executable-find "eslint")
+    (flycheck-add-mode 'javascript-eslint 'web-mode)))
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
 ;; Use json-mode for .json files
