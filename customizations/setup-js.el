@@ -45,6 +45,10 @@
 (add-hook 'web-mode-hook #'smartparens-mode)
 (add-hook 'json-mode-hook #'smartparens-mode)
 
+;; Setup tern
+(add-to-list 'load-path (expand-file-name "tern/emacs" site-lisp-dir))
+(autoload 'tern-mode "tern.el" nil t)
+
 (eval-after-load "sgml-mode"
   '(progn
      (require 'tagedit)
