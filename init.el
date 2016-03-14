@@ -65,7 +65,7 @@
     dired-details
     expand-region
     flycheck
-    flycheck-post-tip
+    flycheck-pos-tip
     flycheck-clojure
     guide-key
     which-key
