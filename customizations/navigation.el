@@ -31,6 +31,9 @@
 ;; This allows partial matches, e.g. "tl" will match "Tyrion Lannister"
 (setq ido-enable-flex-matching t)
 
+;;; smarter fuzzy matching for ido
+(flx-ido-mode +1)
+
 ;; Turn this behavior off because it's annoying
 (setq ido-use-filename-at-point nil)
 
