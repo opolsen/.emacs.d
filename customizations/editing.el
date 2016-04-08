@@ -117,9 +117,10 @@
 (global-auto-revert-mode 1)
 
 ;; Keybindings for multiple-cursors
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-å") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-å") 'mc/mark-next-like-this)
+(global-set-key (kbd "s-å") 'mc/mark-previous-like-this)
+(global-set-key (kbd "M-å") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-M-å") 'mc/mark-all-in-region)
 
 ;; Setup ace-jump-mode
 (require 'ace-jump-mode)
