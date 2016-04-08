@@ -9,6 +9,7 @@
             (flycheck-mode t)
             (when (executable-find "eslint")
               (flycheck-select-checker 'javascript-eslint))
+            (tern-mode t)
             (define-key js2-mode-map (kbd "M-j")
               (lambda ()
                 (interactive)
@@ -41,6 +42,7 @@
   (flycheck-mode t)
   (when (executable-find "eslint")
     (flycheck-add-mode 'javascript-eslint 'web-mode)))
+  (tern-mode t))
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
 ;; Use json-mode for .json files
