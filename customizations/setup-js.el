@@ -57,6 +57,8 @@
 ;; Setup tern
 (add-to-list 'load-path (expand-file-name "tern/emacs" site-lisp-dir))
 (autoload 'tern-mode "tern.el" nil t)
+(require 'company)
+(add-to-list 'company-backends 'company-tern)
 
 (eval-after-load "sgml-mode"
   '(progn

@@ -94,3 +94,6 @@
 (eval-after-load "which-key" '(diminish 'which-key-mode))
 (eval-after-load "eldoc" '(diminish 'eldoc-mode))
 (eval-after-load "elisp-slime-nav" '(diminish 'elisp-slime-nav-mode))
+(eval-after-load "tern" '(diminish 'tern-mode))
+(eval-after-load "company" '(diminish 'company-mode))
+(eval-after-load "autorevert" '(diminish 'auto-revert-mode))
