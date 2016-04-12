@@ -18,6 +18,7 @@
 
 ;; Activate subword-mode
 (add-hook 'js-mode-hook 'subword-mode)
+(add-hook 'web-mode-hook 'subword-mode)
 (add-hook 'html-mode-hook 'subword-mode)
 
 ;; Setup js2-refactor-mode
