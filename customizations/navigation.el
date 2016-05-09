@@ -118,3 +118,6 @@
     (message "Aborting")))
 
 (global-set-key (kbd "C-c g") #'magit-status)
+
+;; Move between windows with Shift-arrow
+(windmove-default-keybindings)
