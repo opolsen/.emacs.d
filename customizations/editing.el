@@ -126,6 +126,7 @@
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (define-key global-map (kbd "C-ø") 'ace-jump-char-mode)
+(define-key global-map (kbd "C-Ø") 'ace-jump-word-mode)
 
 ;; Setup expand-region
 (require 'expand-region)
