@@ -42,8 +42,9 @@
   (web-mode-set-content-type "jsx")
   (flycheck-mode t)
   (when (executable-find "eslint")
-    (flycheck-add-mode 'javascript-eslint 'web-mode)))
-  (tern-mode t))
+    (flycheck-add-mode 'javascript-eslint 'web-mode)
+    (tern-mode t)))
+
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
 ;; Use json-mode for .json files
