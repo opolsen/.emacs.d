@@ -67,7 +67,6 @@
     flycheck
     flycheck-pos-tip
     flycheck-clojure
-    guide-key
     which-key
     ido-at-point
     ido-vertical-mode
