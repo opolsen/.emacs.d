@@ -93,8 +93,8 @@
 
 ;; Enable move-text
 (require 'move-text)
-(global-set-key (kbd "C-S-p") 'move-text-up)
-(global-set-key (kbd "C-S-n") 'move-text-down)
+(global-set-key (kbd "C-S-<up>") 'move-text-up)
+(global-set-key (kbd "C-S-<down>") 'move-text-down)
 
 ;; Keybinding for occur
 (global-set-key (kbd "C-c o") 'occur)
