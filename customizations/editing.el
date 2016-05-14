@@ -117,20 +117,22 @@
 (global-auto-revert-mode 1)
 
 ;; Keybindings for multiple-cursors
-(global-set-key (kbd "C-å") 'mc/mark-next-like-this)
-(global-set-key (kbd "s-å") 'mc/mark-previous-like-this)
-(global-set-key (kbd "M-å") 'mc/mark-all-like-this)
-(global-set-key (kbd "C-M-å") 'mc/mark-all-in-region)
+(global-set-key (kbd "C-æ") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-å") 'mc/mark-previous-like-this)
+(global-set-key (kbd "M-æ") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-M-æ") 'mc/mark-all-in-region)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
+(global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 
 ;; Setup ace-jump-mode
 (require 'ace-jump-mode)
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-(define-key global-map (kbd "C-ø") 'ace-jump-char-mode)
-(define-key global-map (kbd "C-Ø") 'ace-jump-word-mode)
+(define-key global-map (kbd "C-ø") 'ace-jump-mode)
+(define-key global-map (kbd "C-Ø") 'ace-jump-char-mode)
 
 ;; Setup expand-region
 (require 'expand-region)
-(global-set-key (kbd "C-æ") 'er/expand-region)
+(global-set-key (kbd "C-@") 'er/expand-region)
 
 (global-set-key (kbd "M-j")
                 (lambda ()
