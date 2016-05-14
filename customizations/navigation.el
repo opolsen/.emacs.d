@@ -144,3 +144,14 @@
 
 ;; Move between windows with Shift-arrow
 (windmove-default-keybindings)
+
+;; Smart home key.
+(defun smart-beginning-of-line ()
+  "Move point to first non-whitespace character or beginning-of-line."
+  (interactive "^")
+  (let ((oldpos (point)))
+    (back-to-indentation)
+    (and (= oldpos (point))
+         (beginning-of-line))))
+(global-set-key (kbd "<home>") 'smart-beginning-of-line)
+(global-set-key (kbd "C-a") 'smart-beginning-of-line)
