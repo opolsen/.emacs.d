@@ -73,6 +73,7 @@
     flx-ido
     js2-mode
     js2-refactor
+    clj-refactor
     move-text
     multiple-cursors
     nodejs-repl
