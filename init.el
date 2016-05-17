@@ -86,7 +86,8 @@
     smooth-scroll
     dash
     diminish
-    company))
+    company
+    git-gutter-fringe))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
