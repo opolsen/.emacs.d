@@ -97,6 +97,7 @@
 (eval-after-load "tern" '(diminish 'tern-mode))
 (eval-after-load "company" '(diminish 'company-mode))
 (eval-after-load "autorevert" '(diminish 'auto-revert-mode))
+(eval-after-load "git-gutter" '(diminish 'git-gutter-mode))
 
 ;; full screen magit-status
 (require 'magit)
