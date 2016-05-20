@@ -50,8 +50,7 @@
 ;; Use json-mode for .json files
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
-;; Use smartparens
-(require 'smartparens-config)
+;; Use smartparens for web modes
 (add-hook 'js-mode-hook #'smartparens-mode)
 (add-hook 'web-mode-hook #'smartparens-mode)
 (add-hook 'json-mode-hook #'smartparens-mode)
