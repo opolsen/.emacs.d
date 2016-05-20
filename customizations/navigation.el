@@ -79,9 +79,16 @@
 ;; Require this package in order to be able to visit all marked files in dired mode
 (require 'dired-x)
 
+;; Quickly jump to next window
 (global-set-key (kbd "M-o") 'other-window)
+
+;; Move between windows with Shift-arrow
+(windmove-default-keybindings)
+
+;; Quicker navigation between paragraphs
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
+
 (global-set-key (kbd "C-<home>") 'beginning-of-buffer)
 (global-set-key (kbd "C-<end>") 'end-of-buffer)
 
@@ -141,9 +148,6 @@
     (message "Aborting")))
 
 (global-set-key (kbd "C-x g") #'magit-status)
-
-;; Move between windows with Shift-arrow
-(windmove-default-keybindings)
 
 ;; Smart home key.
 (defun smart-beginning-of-line ()
