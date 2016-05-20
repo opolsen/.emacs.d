@@ -48,7 +48,6 @@
                                                "backups"))))
 (setq auto-save-default nil)
 
-
 ;; comments
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"
@@ -76,8 +75,6 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
-
-;; (global-flycheck-mode)
 
 ;; Delete region when typing
 (delete-selection-mode 1)

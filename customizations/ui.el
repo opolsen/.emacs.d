@@ -26,7 +26,6 @@
 (add-to-list 'load-path "~/.emacs.d/themes")
 (load-theme 'sanityinc-tomorrow-night t)
 
-;; increase font size for better readability
 (set-face-attribute 'default nil :height 100 :family "Source Code Pro Medium")
 
 (if (eq system-type 'darwin)
