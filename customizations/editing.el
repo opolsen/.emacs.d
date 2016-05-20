@@ -133,11 +133,14 @@
     (global-set-key (kbd "C-@") 'er/expand-region)
   (global-set-key (kbd "C-'") 'er/expand-region))
 
+;; Quickly join next line with current line
 (global-set-key (kbd "M-j")
                 (lambda ()
                   (interactive)
                   (join-line -1)))
 
+
+;; Quickly open line above or below current line regardless of cursor position
 (defun open-line-below ()
   (interactive)
   (end-of-line)
@@ -154,6 +157,7 @@
 (global-set-key (kbd "<C-return>") 'open-line-below)
 (global-set-key (kbd "<C-S-return>") 'open-line-above)
 
+;; Grabbed from https://www.emacswiki.org/emacs/ImenuMode
 (defun ido-goto-symbol (&optional symbol-list)
   "Refresh imenu and jump to a place in the buffer using Ido."
   (interactive)
