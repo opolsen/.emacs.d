@@ -15,3 +15,5 @@
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
 (global-set-key (kbd "C-c C-k") 'eval-buffer)
+(require 'crux)
+(global-set-key (kbd "C-c e") #'crux-eval-and-replace)

@@ -90,7 +90,8 @@
     company
     git-gutter-fringe
     hydra
-    anzu))
+    anzu
+    crux))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a

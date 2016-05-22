@@ -159,3 +159,9 @@
          (beginning-of-line))))
 (global-set-key (kbd "<home>") 'smart-beginning-of-line)
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
+
+(require 'crux)
+(global-set-key (kbd "C-x 4 t") #'crux-transpose-windows)
+(global-set-key (kbd "C-c D") #'crux-delete-file-and-buffer)
+(global-set-key (kbd "C-c r") #'crux-rename-file-and-buffer)
+(global-set-key (kbd "C-c d") #'crux-duplicate-current-line-or-region)
