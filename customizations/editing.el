@@ -30,6 +30,10 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
+;; Show number of current and total matches when searching
+(require 'anzu)
+(global-anzu-mode 1)
+
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
 
