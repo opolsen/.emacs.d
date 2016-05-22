@@ -97,6 +97,7 @@
 (eval-after-load "company" '(diminish 'company-mode))
 (eval-after-load "autorevert" '(diminish 'auto-revert-mode))
 (eval-after-load "git-gutter" '(diminish 'git-gutter-mode))
+(eval-after-load "anzu" '(diminish 'anzu-mode))
 
 ;; full screen magit-status
 (require 'magit)
