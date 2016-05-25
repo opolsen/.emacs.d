@@ -88,6 +88,8 @@
     dash
     diminish
     company
+    company-tern
+    company-racer
     git-gutter-fringe
     hydra
     anzu
