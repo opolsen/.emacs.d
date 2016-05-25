@@ -91,7 +91,9 @@
     git-gutter-fringe
     hydra
     anzu
-    crux))
+    crux
+    rust-mode
+    racer))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -150,6 +152,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-rust.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
