@@ -8,6 +8,9 @@
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
 
+(add-hook 'racer-mode-hook #'flycheck-mode)
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+
 ;; Use company for auto-completion
 (require 'company-racer)
 (with-eval-after-load 'company
