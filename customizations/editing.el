@@ -215,6 +215,8 @@
 ;; Default smartparens configuration
 (require 'smartparens-config)
 
+(sp-use-paredit-bindings)
+
 ;; Smartparens keybindings.
 ;; Mostly taken from the author: https://github.com/Fuco1/.emacs.d/blob/master/files/smartparens.el
 (define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
