@@ -116,3 +116,6 @@
 
 (require 'git-gutter-fringe)
 (global-git-gutter-mode t)
+
+;; Update git-gutter when staging/unstaging/etc. in magit
+(add-hook 'git-gutter:update-hooks 'magit-revert-buffer-hook)
