@@ -61,7 +61,7 @@
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 
 ;; yay rainbows!
-;(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; use 2 spaces for tabs
 (defun die-tabs ()
