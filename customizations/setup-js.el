@@ -55,6 +55,10 @@
 (add-hook 'web-mode-hook #'smartparens-mode)
 (add-hook 'json-mode-hook #'smartparens-mode)
 
+;; Additional pairs for smartparens
+(sp-pair "<" ">")
+(sp-pair "`" "`")
+
 ;; Setup tern
 (add-to-list 'load-path (expand-file-name "tern/emacs" site-lisp-dir))
 (autoload 'tern-mode "tern.el" nil t)
