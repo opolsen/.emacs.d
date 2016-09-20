@@ -156,6 +156,7 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 (load "setup-rust.el")
+(load "setup-xml.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
