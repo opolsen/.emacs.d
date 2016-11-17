@@ -113,11 +113,6 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-
-;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
-;; to load them.
-(add-to-list 'load-path "~/.emacs.d/vendor")
-
 (setq site-lisp-dir
       (expand-file-name "site-lisp" user-emacs-directory))
 
