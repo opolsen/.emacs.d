@@ -166,3 +166,6 @@
 (global-set-key (kbd "C-c r") #'crux-rename-file-and-buffer)
 (global-set-key (kbd "C-c d") #'crux-duplicate-current-line-or-region)
 (global-set-key (kbd "s-k") #'crux-kill-whole-line)
+
+;; Kill current buffer without asking
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
