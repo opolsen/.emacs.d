@@ -11,7 +11,6 @@
   (smartparens-mode)
   (flycheck-mode)
   (when (executable-find "pylint")
-    (flycheck-add-mode 'pychin-pylint 'python-mode)
     (flycheck-select-checker 'python-pylint)))
 
 (eval-after-load "company"
