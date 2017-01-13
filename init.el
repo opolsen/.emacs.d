@@ -69,7 +69,9 @@
     crux
     rust-mode
     racer
-    elm-mode))
+    elm-mode
+    anaconda-mode
+    company-anaconda))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -123,6 +125,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-python.el")
 (load "setup-rust.el")
 (load "setup-xml.el")
 
