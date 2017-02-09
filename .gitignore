@@ -9,3 +9,7 @@ auto-save-list
 backups
 elpa
 eshell
+anaconda-mode
+url
+tramp
+.mc-lists.el
