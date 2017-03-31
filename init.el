@@ -40,6 +40,7 @@
     flycheck-pos-tip
     flycheck-clojure
     flycheck-rust
+    flycheck-elm
     which-key
     ido-at-point
     ido-vertical-mode
@@ -61,6 +62,7 @@
     dash
     diminish
     company
+    company-quickhelp
     company-tern
     company-racer
     git-gutter-fringe
@@ -128,6 +130,7 @@
 (load "setup-python.el")
 (load "setup-rust.el")
 (load "setup-xml.el")
+(load "setup-elm.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
