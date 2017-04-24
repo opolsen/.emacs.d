@@ -32,3 +32,5 @@
 
 ;; Move files to trash can when deleted
 (setq delete-by-moving-to-trash t)
+
+(setq tramp-default-method "ssh")
