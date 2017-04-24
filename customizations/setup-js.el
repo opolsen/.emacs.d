@@ -4,8 +4,7 @@
 
 (setq js2-highlight-level 3)
 
-(add-hook 'js2-mode-hook
-          (defun my-js2-mode-hook ()
+(defun my-js2-mode-hook ()
             (flycheck-mode t)
             (when (executable-find "eslint")
               (flycheck-select-checker 'javascript-eslint))
@@ -13,8 +12,9 @@
             (define-key js2-mode-map (kbd "M-j")
               (lambda ()
                 (interactive)
-                (join-line -1)))
-            ))
+                (join-line -1))))
+
+(add-hook 'js2-mode-hook 'my-js2-mode-hook)
 
 ;; Activate subword-mode
 (add-hook 'js-mode-hook 'subword-mode)
