@@ -58,6 +58,7 @@
     web-mode
     ethan-wspace
     color-theme-sanityinc-tomorrow
+    zerodark-theme
     smooth-scroll
     dash
     diminish

@@ -24,7 +24,7 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'sanityinc-tomorrow-night t)
+(load-theme 'zerodark t)
 
 (set-face-attribute 'default nil :height 100 :family "Source Code Pro Medium")
 
