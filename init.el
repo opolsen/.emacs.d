@@ -135,3 +135,4 @@
 (load "setup-rust.el")
 (load "setup-xml.el")
 (load "setup-elm.el")
+(load "setup-org.el")
