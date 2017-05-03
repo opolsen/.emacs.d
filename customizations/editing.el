@@ -224,3 +224,5 @@
 (define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
 (define-key smartparens-mode-map (kbd "C-M-<left>") 'sp-backward-slurp-sexp)
 (define-key smartparens-mode-map (kbd "C-M-<right>") 'sp-backward-barf-sexp)
+(define-key smartparens-mode-map (kbd "M-?") 'sp-convolute-sexp)
+(define-key smartparens-mode-map (kbd "M-r") 'sp-rewrap-sexp)
