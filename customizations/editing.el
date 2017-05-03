@@ -126,10 +126,11 @@
 (global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
 (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 
-;; Setup ace-jump-mode
-(require 'ace-jump-mode)
-(define-key global-map (kbd "C-ø") 'ace-jump-mode)
-(define-key global-map (kbd "C-Ø") 'ace-jump-char-mode)
+;; Setup avy
+(require 'avy)
+(define-key global-map (kbd "C-ø") 'avy-goto-word-or-subword-1)
+(define-key global-map (kbd "C-Ø") 'avy-goto-char-timer)
+(define-key isearch-mode-map (kbd "C-ø") 'avy-isearch)
 
 ;; Setup expand-region
 (require 'expand-region)

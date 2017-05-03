@@ -33,7 +33,7 @@
     rainbow-delimiters
     tagedit
     magit
-    ace-jump-mode
+    avy
     dired-details
     expand-region
     flycheck
