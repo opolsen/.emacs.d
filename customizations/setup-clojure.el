@@ -2,8 +2,8 @@
 ;; Clojure
 ;;;;
 
-;; Enable paredit for Clojure
-(add-hook 'clojure-mode-hook 'enable-paredit-mode)
+;; Enable smartparens
+(add-hook 'clojure-mode-hook 'smartparens-mode)
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
