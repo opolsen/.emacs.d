@@ -75,6 +75,8 @@
 (setq projectile-globally-ignored-directories
       (append '("node_modules" "target" ".tmp" "dist")
               projectile-globally-ignored-directories))
+(setq projectile-use-git-grep t)
+(setq projectile-enable-caching nil)
 
 ;; Require this package in order to be able to visit all marked files in dired mode
 (require 'dired-x)
