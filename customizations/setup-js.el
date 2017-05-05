@@ -11,7 +11,7 @@
             (tern-mode t)
             (define-key js-mode-map (kbd "M-.") nil)
             (define-key js2-mode-map (kbd "M-j") nil)
-            (define-key js2-mode-map (kbd "C-k") 'js2r-kill)
+            (define-key js2-mode-map (kbd "C-k") 'js2r-kill))
 
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
 
