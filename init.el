@@ -33,6 +33,7 @@
     rainbow-delimiters
     tagedit
     magit
+    git-timemachine
     avy
     dired-details
     expand-region
