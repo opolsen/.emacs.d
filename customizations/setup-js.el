@@ -9,10 +9,9 @@
             (when (executable-find "eslint")
               (flycheck-select-checker 'javascript-eslint))
             (tern-mode t)
-            (define-key js2-mode-map (kbd "M-j")
-              (lambda ()
-                (interactive)
-                (join-line -1))))
+            (define-key js-mode-map (kbd "M-.") nil)
+            (define-key js2-mode-map (kbd "M-j") nil)
+            (define-key js2-mode-map (kbd "C-k") 'js2r-kill))
 
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
 
