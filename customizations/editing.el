@@ -223,3 +223,4 @@
 (define-key smartparens-mode-map (kbd "M-?") 'sp-convolute-sexp)
 (define-key smartparens-mode-map (kbd "M-r") 'sp-rewrap-sexp)
 (define-key smartparens-mode-map (kbd "C-k") 'sp-kill-hybrid-sexp)
+(define-key smartparens-mode-map (kbd "C-M-w") 'sp-copy-sexp)
