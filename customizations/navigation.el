@@ -73,7 +73,7 @@
 (projectile-global-mode)
 
 (setq projectile-globally-ignored-directories
-      (append '("node_modules" "target" ".tmp" "dist")
+      (append '("node_modules" "target" ".tmp" "dist" ".cljs_rhino_repl")
               projectile-globally-ignored-directories))
 (setq projectile-use-git-grep t)
 (setq projectile-enable-caching nil)
