@@ -128,6 +128,8 @@
 (define-key global-map (kbd "C-Ø") 'avy-goto-char-timer)
 (define-key isearch-mode-map (kbd "C-ø") 'avy-isearch)
 
+(setq avy-background t)
+
 ;; Setup expand-region
 (require 'expand-region)
 (if (eq system-type 'darwin)
