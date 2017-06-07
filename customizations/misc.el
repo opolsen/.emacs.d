@@ -34,3 +34,5 @@
 (setq delete-by-moving-to-trash t)
 
 (setq tramp-default-method "ssh")
+
+(add-to-list 'auto-mode-alist '("\\.rest$" . restclient-mode))
