@@ -48,6 +48,7 @@
 
 ;; Use json-mode for .json files
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
+(add-to-list 'auto-mode-alist '(".eslintrc" . json-mode))
 
 ;; Use smartparens for web modes
 (add-hook 'js-mode-hook #'smartparens-mode)
