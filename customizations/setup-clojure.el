@@ -3,7 +3,7 @@
 ;;;;
 
 ;; Enable smartparens
-(add-hook 'clojure-mode-hook 'smartparens-mode)
+(add-hook 'clojure-mode-hook 'smartparens-strict-mode)
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
