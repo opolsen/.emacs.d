@@ -115,10 +115,4 @@
 
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 
-(require 'git-gutter-fringe)
-(global-git-gutter-mode t)
-
-;; Update git-gutter when staging/unstaging/etc. in magit
-(add-hook 'git-gutter:update-hooks 'magit-revert-buffer-hook)
-
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
