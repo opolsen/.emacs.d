@@ -7,7 +7,7 @@
 (defun my-python-mode-hook ()
   (anaconda-mode)
   (anaconda-eldoc-mode)
-  (submode-word)
+  (subword-mode)
   (company-mode)
   (smartparens-mode)
   (flycheck-mode)

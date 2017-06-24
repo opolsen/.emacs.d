@@ -17,5 +17,4 @@
   (add-to-list 'company-backends 'company-racer))
 
 (add-hook 'racer-mode-hook #'company-mode)
-(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 (setq company-tooltip-align-annotations t)
