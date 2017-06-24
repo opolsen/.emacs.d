@@ -8,9 +8,6 @@
 (if (not (eq system-type 'darwin))
     (menu-bar-mode -1))
 
-;; Show line numbers
-(global-linum-mode)
-
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 
