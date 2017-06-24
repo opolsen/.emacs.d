@@ -59,14 +59,6 @@
 ;; yay rainbows!
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-;; use 2 spaces for tabs
-(defun die-tabs ()
-  (interactive)
-  (set-variable 'tab-width 2)
-  (mark-whole-buffer)
-  (untabify (region-beginning) (region-end))
-  (keyboard-quit))
-
 ;; fix weird os x kill error
 (defun ns-get-pasteboard ()
   "Returns the value of the pasteboard, or nil for unsupported formats."
