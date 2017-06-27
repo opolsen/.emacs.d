@@ -113,3 +113,5 @@
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+(setq flycheck-indication-mode nil)
