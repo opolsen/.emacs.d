@@ -65,6 +65,7 @@
     diminish
     company
     company-quickhelp
+    tern
     company-tern
     company-racer
     git-gutter-fringe

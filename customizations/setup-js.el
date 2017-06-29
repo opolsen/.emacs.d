@@ -60,10 +60,7 @@
   (sp-local-pair "<" ">")
   (sp-local-pair "`" "`"))
 
-;; Setup tern
-(add-to-list 'load-path (expand-file-name "tern/emacs" site-lisp-dir))
-(autoload 'tern-mode "tern.el" nil t)
-(require 'company)
+(require 'company-tern)
 (add-to-list 'company-backends 'company-tern)
 
 (eval-after-load "sgml-mode"
