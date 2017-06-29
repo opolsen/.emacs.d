@@ -26,10 +26,6 @@
 (define-key key-translation-map (kbd "s-7") (kbd "|"))
 (define-key key-translation-map (kbd "s-/") (kbd "\\"))
 
-;; Prevent props to be commented out by quotes
-(add-hook 'conf-javaprop-mode-hook
-          '(lambda () (conf-quote-normal nil)))
-
 ;; Move files to trash can when deleted
 (setq delete-by-moving-to-trash t)
 
