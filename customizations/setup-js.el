@@ -9,6 +9,7 @@
             (when (executable-find "eslint")
               (flycheck-select-checker 'javascript-eslint))
             (tern-mode t)
+            (company-mode t)
             (define-key js-mode-map (kbd "M-.") nil)
             (define-key js2-mode-map (kbd "M-j") nil)
             (define-key js2-mode-map (kbd "C-k") 'js2r-kill))
@@ -42,7 +43,8 @@
   (flycheck-mode t)
   (when (executable-find "eslint")
     (flycheck-add-mode 'javascript-eslint 'web-mode)
-    (tern-mode t)))
+    (tern-mode t)
+    (company-mode t)))
 
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
