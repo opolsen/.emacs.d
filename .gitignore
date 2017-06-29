@@ -13,3 +13,5 @@ anaconda-mode
 url
 tramp
 .mc-lists.el
+ido.last
+server
