@@ -68,7 +68,6 @@
     tern
     company-tern
     company-racer
-    git-gutter-fringe
     hydra
     anzu
     crux
