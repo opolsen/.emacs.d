@@ -16,7 +16,7 @@
 
 (defun decrement-number-decimal (&optional arg)
   (interactive "p*")
-  (my-increment-number-decimal (if arg (- arg) -1)))
+  (increment-number-decimal (if arg (- arg) -1)))
 
 (global-set-key (kbd "C-c +") 'increment-number-decimal)
 (global-set-key (kbd "C-c -") 'decrement-number-decimal)
