@@ -19,7 +19,6 @@
 ;; Activate subword-mode
 (add-hook 'js-mode-hook 'subword-mode)
 (add-hook 'web-mode-hook 'subword-mode)
-(add-hook 'html-mode-hook 'subword-mode)
 
 ;; Setup js2-refactor-mode
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
@@ -48,14 +47,9 @@
 
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
-;; Use json-mode for .json files
-(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
-(add-to-list 'auto-mode-alist '(".eslintrc" . json-mode))
-
 ;; Use smartparens for web modes
 (add-hook 'js-mode-hook #'smartparens-mode)
 (add-hook 'web-mode-hook #'smartparens-mode)
-(add-hook 'json-mode-hook #'smartparens-mode)
 
 ;; Additional pairs for smartparens
 (sp-with-modes 'web-mode
@@ -64,9 +58,3 @@
 
 (require 'company-tern)
 (add-to-list 'company-backends 'company-tern)
-
-(eval-after-load "sgml-mode"
-  '(progn
-     (require 'tagedit)
-     (tagedit-add-paredit-like-keybindings)
-     (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))

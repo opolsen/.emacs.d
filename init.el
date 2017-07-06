@@ -132,6 +132,8 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-json.el")
+(load "setup-html.el")
 (load "setup-python.el")
 (load "setup-rust.el")
 (load "setup-xml.el")
