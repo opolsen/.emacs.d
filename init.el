@@ -60,6 +60,7 @@
     ethan-wspace
     color-theme-sanityinc-tomorrow
     zerodark-theme
+    monokai-theme
     smooth-scroll
     dash
     diminish
