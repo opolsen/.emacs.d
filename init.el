@@ -76,7 +76,9 @@
     racer
     elm-mode
     anaconda-mode
-    company-anaconda))
+    company-anaconda
+    prettier-js
+    rjsx-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
