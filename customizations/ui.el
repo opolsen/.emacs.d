@@ -17,7 +17,7 @@
 
 (load-theme 'monokai t)
 
-(set-face-attribute 'default nil :height 110 :family "Source Code Pro Medium")
+(set-face-attribute 'default nil :height 100 :family "Source Code Pro Medium")
 
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :height 120))
