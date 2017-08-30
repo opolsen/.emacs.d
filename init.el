@@ -78,7 +78,8 @@
     anaconda-mode
     company-anaconda
     prettier-js
-    rjsx-mode))
+    rjsx-mode
+    restclient))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
