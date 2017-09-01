@@ -18,3 +18,6 @@
   '(add-to-list 'company-backends 'company-anaconda))
 
 (add-hook 'python-mode-hook 'my-python-mode-hook)
+(add-hook 'inferior-python-mode-hook 'smartparens-mode)
+
+(define-key python-mode-map (kbd "C-c v") 'pythonic-activate)
