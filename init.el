@@ -105,12 +105,12 @@
 ;; Customization
 ;;;;
 
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
 
 ;; Add a directory to our load path so that when you `load` things
 ;; below, Emacs knows where to look for the corresponding file.
-(add-to-list 'load-path "~/.emacs.d/customizations")
+(add-to-list 'load-path (expand-file-name "customizations" user-emacs-directory))
 
 ;; These customizations change the way emacs looks and disable/enable
 ;; some user interface elements
