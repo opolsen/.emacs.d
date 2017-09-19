@@ -1,8 +1,8 @@
+(require 'anaconda-mode)
 (require 'company)
 (require 'company-anaconda)
-(require 'anaconda-mode)
-(require 'smartparens)
 (require 'flycheck)
+(require 'smartparens)
 
 (defun my-python-mode-hook ()
   (anaconda-mode)
