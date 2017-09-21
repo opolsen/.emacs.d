@@ -30,6 +30,8 @@
 (require 'anzu)
 (global-anzu-mode 1)
 
+(define-key isearch-mode-map (kbd "C-c C-o") 'isearch-occur)
+
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
 
