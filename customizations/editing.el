@@ -221,3 +221,8 @@
 (define-key smartparens-mode-map (kbd "C-M-w") 'sp-copy-sexp)
 
 (global-set-key (kbd "M-w") 'whole-line-or-region-kill-ring-save)
+
+(require 'dired-details)
+(setq-default dired-details-hidden-string "--- ")
+(dired-details-install)
+(setq dired-dwim-targete t)
