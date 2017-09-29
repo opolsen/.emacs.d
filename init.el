@@ -60,7 +60,7 @@
     color-theme-sanityinc-solarized
     color-theme-sanityinc-tomorrow
     zerodark-theme
-    zenburn
+    zenburn-theme
     monokai-theme
     smooth-scroll
     dash
