@@ -57,8 +57,10 @@
     json-mode
     web-mode
     ethan-wspace
+    color-theme-sanityinc-solarized
     color-theme-sanityinc-tomorrow
     zerodark-theme
+    zenburn
     monokai-theme
     smooth-scroll
     dash
