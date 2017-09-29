@@ -77,7 +77,6 @@
 ;; Cleanup modeline
 (require 'diminish)
 (eval-after-load "subword" '(diminish 'subword-mode))
-(eval-after-load "paredit" '(diminish 'paredit-mode))
 (eval-after-load "smartparens" '(diminish 'smartparens-mode))
 (eval-after-load "ethan-wspace" '(diminish 'ethan-wspace-mode))
 (eval-after-load "yasnippet" '(diminish 'yas-minor-mode))

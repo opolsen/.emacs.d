@@ -23,8 +23,7 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(paredit
-    clojure-mode
+  '(clojure-mode
     clojure-mode-extra-font-locking
     cider
     ido-ubiquitous
