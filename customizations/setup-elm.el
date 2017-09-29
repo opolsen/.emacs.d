@@ -6,7 +6,7 @@
   (company-mode)
   (company-quickhelp-mode 1)
   (eval-after-load 'flycheck
-  '(add-hook 'flycheck-mode-hook #'flycheck-elm-setup))
+    '(add-hook 'flycheck-mode-hook #'flycheck-elm-setup))
   (flycheck-mode))
 
 (add-hook 'elm-mode-hook 'my-elm-mode-hook)
