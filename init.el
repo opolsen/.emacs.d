@@ -141,6 +141,8 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
+(load "setup-magit.el")
+
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")

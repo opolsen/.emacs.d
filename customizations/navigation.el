@@ -151,8 +151,6 @@
 
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 
-(global-set-key (kbd "C-x g") #'magit-status)
-
 ;; Smart home key.
 (defun smart-beginning-of-line ()
   "Move point to first non-whitespace character or beginning-of-line."
