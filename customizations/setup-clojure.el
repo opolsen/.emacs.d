@@ -4,7 +4,6 @@
 (defun my-clojure-mode-hook ()
   (clj-refactor-mode 1)
   (smartparens-strict-mode)
-  (subword-mode)
   (cljr-add-keybindings-with-prefix "C-c C-m")
   (flycheck-mode 1)
   (flycheck-clojure-setup))
@@ -14,7 +13,6 @@
 (add-hook 'cider-mode-hook 'eldoc-mode)
 
 (add-hook 'cider-repl-mode-hook 'smartparens-mode)
-(add-hook 'cider-repl-mode-hook 'subword-mode)
 
 ;; hide REPL buffer when it's finished connecting
 (setq cider-repl-pop-to-buffer-on-connect nil)

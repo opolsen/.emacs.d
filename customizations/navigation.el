@@ -182,3 +182,5 @@
 (global-set-key (kbd "C-c j") 'create-json-buffer)
 
 (define-key projectile-mode-map (kbd "C-c p n") 'helm-projectile-grep)
+
+(global-subword-mode 1)

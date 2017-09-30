@@ -4,7 +4,6 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
 (defun common-js-setup ()
-  (subword-mode)
   (smartparens-mode)
   (tern-mode)
   (company-mode)

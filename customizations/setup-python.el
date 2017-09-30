@@ -7,7 +7,6 @@
 (defun my-python-mode-hook ()
   (anaconda-mode)
   (anaconda-eldoc-mode)
-  (subword-mode)
   (company-mode)
   (add-to-list 'company-backends 'company-anaconda)
   (smartparens-mode)
