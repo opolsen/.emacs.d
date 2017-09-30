@@ -174,13 +174,7 @@
 ;; Kill current buffer without asking
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 
-(defun create-json-buffer ()
-  (interactive)
-  (switch-to-buffer "*JSON*")
-  (json-mode))
-
-(global-set-key (kbd "C-c j") 'create-json-buffer)
-
+;; Nice interactive way to search for pattern in project
 (define-key projectile-mode-map (kbd "C-c p n") 'helm-projectile-grep)
 
 (global-subword-mode 1)
