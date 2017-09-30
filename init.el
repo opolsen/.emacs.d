@@ -104,6 +104,11 @@
 
 (add-to-list 'load-path site-lisp-dir)
 
+;; Start server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
 ;;;;
 ;; Customization
 ;;;;
