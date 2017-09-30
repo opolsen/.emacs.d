@@ -23,66 +23,66 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(clojure-mode
-    clojure-mode-extra-font-locking
-    cider
-    ido-ubiquitous
-    smex
-    projectile
-    rainbow-delimiters
-    tagedit
-    magit
-    git-timemachine
+  '(anaconda-mode
+    anzu
     avy
+    cider
+    clj-refactor
+    clojure-mode
+    clojure-mode-extra-font-locking
+    color-theme-sanityinc-solarized
+    color-theme-sanityinc-tomorrow
+    company
+    company-anaconda
+    company-quickhelp
+    company-racer
+    company-tern
+    crux
+    dash
+    diminish
     dired-details
+    elm-mode
+    ethan-wspace
     expand-region
-    flycheck
-    flycheck-pos-tip
-    flycheck-clojure
-    flycheck-rust
-    flycheck-elm
-    which-key
-    ido-at-point
-    ido-vertical-mode
     flx-ido
+    flycheck
+    flycheck-clojure
+    flycheck-elm
+    flycheck-pos-tip
+    flycheck-rust
+    git-timemachine
+    helm
+    helm-projectile
+    hydra
+    ido-at-point
+    ido-ubiquitous
+    ido-vertical-mode
     js2-mode
     js2-refactor
-    clj-refactor
+    json-mode
+    magit
+    monokai-theme
     move-text
     multiple-cursors
     nodejs-repl
+    prettier-js
+    projectile
+    racer
+    rainbow-delimiters
+    restclient
+    rjsx-mode
+    rust-mode
     smartparens
+    smex
+    smooth-scroll
+    tagedit
+    tern
+    web-mode
+    which-key
     whole-line-or-region
     yasnippet
-    json-mode
-    web-mode
-    ethan-wspace
-    color-theme-sanityinc-solarized
-    color-theme-sanityinc-tomorrow
-    zerodark-theme
     zenburn-theme
-    monokai-theme
-    smooth-scroll
-    dash
-    diminish
-    company
-    company-quickhelp
-    tern
-    company-tern
-    company-racer
-    hydra
-    anzu
-    crux
-    rust-mode
-    racer
-    elm-mode
-    anaconda-mode
-    company-anaconda
-    prettier-js
-    rjsx-mode
-    restclient
-    helm
-    helm-projectile))
+    zerodark-theme))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
