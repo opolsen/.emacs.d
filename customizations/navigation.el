@@ -47,6 +47,7 @@
 
 ;; This enables ido in all contexts where it could be useful, not just
 ;; for selecting buffer and file names
+(require 'ido-completing-read+)
 (ido-ubiquitous-mode 1)
 
 ;; Show results vertically

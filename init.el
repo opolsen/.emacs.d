@@ -55,7 +55,7 @@
     helm-projectile
     hydra
     ido-at-point
-    ido-ubiquitous
+    ido-completing-read+
     ido-vertical-mode
     js2-mode
     js2-refactor
