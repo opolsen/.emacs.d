@@ -48,6 +48,7 @@
     flycheck
     flycheck-clojure
     flycheck-elm
+    flycheck-joker
     flycheck-pos-tip
     flycheck-rust
     git-timemachine
