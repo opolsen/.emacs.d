@@ -13,6 +13,7 @@
 
 (setq elm-tags-on-save t)
 (setq elm-tags-exclude-elm-stuff nil)
-(setq elm-format-on-save t)
+(when (executable-find "elm-format")
+  (setq elm-format-on-save t))
 
 (add-to-list 'auto-mode-alist '("\\.elm$" . elm-mode))
