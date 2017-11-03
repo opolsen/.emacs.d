@@ -79,6 +79,7 @@
     smooth-scroll
     tagedit
     tern
+    vlf
     web-mode
     which-key
     whole-line-or-region

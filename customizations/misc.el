@@ -34,3 +34,5 @@
 (add-to-list 'auto-mode-alist '("\\.rest$" . restclient-mode))
 
 (add-hook 'term-mode-hook (lambda() (setq yas-dont-activate t)))
+
+(require 'vlf-setup)
