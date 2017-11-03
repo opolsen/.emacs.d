@@ -15,7 +15,7 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
-(load-theme 'monokai t)
+(load-theme 'kaolin-dark t)
 
 (set-face-attribute 'default nil :height 100 :family "Source Code Pro Medium")
 

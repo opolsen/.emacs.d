@@ -61,6 +61,7 @@
     js2-mode
     js2-refactor
     json-mode
+    kaolin-themes
     magit
     monokai-theme
     move-text
