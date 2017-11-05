@@ -52,6 +52,8 @@
     flycheck-pos-tip
     flycheck-rust
     git-timemachine
+    go-eldoc
+    go-mode
     helm
     helm-projectile
     hydra
@@ -156,3 +158,4 @@
 (load "setup-xml.el")
 (load "setup-elm.el")
 (load "setup-org.el")
+(load "setup-go.el")
