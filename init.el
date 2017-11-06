@@ -34,6 +34,7 @@
     color-theme-sanityinc-tomorrow
     company
     company-anaconda
+    company-go
     company-quickhelp
     company-racer
     company-tern
