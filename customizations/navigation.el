@@ -78,6 +78,7 @@
               projectile-globally-ignored-directories))
 (setq projectile-use-git-grep t)
 (setq projectile-enable-caching nil)
+(setq projectile-indexing-method 'alien)
 
 ;; Require this package in order to be able to visit all marked files in dired mode
 (require 'dired-x)
