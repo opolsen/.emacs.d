@@ -17,7 +17,7 @@
 
 (load-theme 'kaolin-dark t)
 
-(set-face-attribute 'default nil :height 100 :family "Office Code Pro Medium")
+(set-face-attribute 'default nil :height 100 :family "Office Code Pro")
 
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :height 120))
