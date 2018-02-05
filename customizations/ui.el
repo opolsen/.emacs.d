@@ -71,6 +71,9 @@
 (setq line-number-mode t)
 (setq column-number-mode t)
 
+;; Show empty lines in fringe
+(setq indicate-empty-lines t)
+
 ;; Prevent line breaking
 (setq-default truncate-lines t)
 
@@ -88,9 +91,6 @@
 (eval-after-load "autorevert" '(diminish 'auto-revert-mode))
 (eval-after-load "git-gutter" '(diminish 'git-gutter-mode))
 (eval-after-load "anzu" '(diminish 'anzu-mode))
-
-
-
 
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
