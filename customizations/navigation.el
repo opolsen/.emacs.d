@@ -178,3 +178,19 @@
 (define-key projectile-mode-map (kbd "C-c p n") 'helm-projectile-grep)
 
 (global-subword-mode 1)
+
+;; Create a new scratch buffer
+(defun create-scratch-buffer ()
+  (interactive)
+  (let ((n 0)
+        buffer-name)
+    (while (progn
+             (setq buffer-name (concat "*scratch-" (int-to-string n) "*"))
+             (setq n (1+ n))
+             (get-buffer buffer-name)))
+    (get-buffer-create buffer-name)
+    (switch-to-buffer buffer-name)
+    (emacs-lisp-mode)
+    (insert ";; Scratch buffer\n\n")))
+
+(global-set-key (kbd "C-c b") 'create-scratch-buffer)
