@@ -26,6 +26,7 @@
   '(anaconda-mode
     anzu
     avy
+    browse-kill-ring
     cider
     clj-refactor
     clojure-mode
