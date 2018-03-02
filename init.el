@@ -83,6 +83,7 @@
     smooth-scroll
     tagedit
     tern
+    undo-tree
     vlf
     web-mode
     which-key
