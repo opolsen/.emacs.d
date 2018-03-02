@@ -72,7 +72,7 @@
 (setq column-number-mode t)
 
 ;; Show empty lines in fringe
-(setq indicate-empty-lines t)
+(set-default 'indicate-empty-lines t)
 
 ;; Prevent line breaking
 (setq-default truncate-lines t)
