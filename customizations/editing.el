@@ -120,6 +120,7 @@
 (require 'avy)
 (define-key global-map (kbd "C-ø") 'avy-goto-word-or-subword-1)
 (define-key global-map (kbd "C-Ø") 'avy-goto-char-timer)
+(define-key global-map (kbd "C-M-ø") 'avy-goto-line)
 (define-key isearch-mode-map (kbd "C-ø") 'avy-isearch)
 
 (setq avy-background t)
