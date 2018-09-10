@@ -72,7 +72,7 @@
 
 ;; projectile everywhere!
 (projectile-global-mode)
-
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (setq projectile-globally-ignored-directories
       (append '("node_modules" "target" ".tmp" "dist" ".cljs_rhino_repl")
               projectile-globally-ignored-directories))
