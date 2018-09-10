@@ -43,6 +43,7 @@
     dash
     diminish
     dired-details
+    doom-themes
     elm-mode
     ethan-wspace
     expand-region
