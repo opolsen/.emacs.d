@@ -17,7 +17,7 @@
 
 (load-theme 'doom-tomorrow-night t)
 
-(set-face-attribute 'default nil :height 100 :family "Office Code Pro")
+(set-face-attribute 'default nil :height 120 :family "Office Code Pro")
 
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :height 120))
