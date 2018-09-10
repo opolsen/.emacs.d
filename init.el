@@ -72,6 +72,7 @@
     move-text
     multiple-cursors
     nodejs-repl
+    org-tree-slide
     prettier-js
     projectile
     racer
