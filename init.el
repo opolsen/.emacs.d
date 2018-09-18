@@ -92,6 +92,7 @@
     which-key
     whole-line-or-region
     yasnippet
+    yaml-mode
     zenburn-theme
     zerodark-theme))
 
@@ -165,3 +166,4 @@
 (load "setup-elm.el")
 (load "setup-org.el")
 (load "setup-go.el")
+(load "setup-yaml.el")
