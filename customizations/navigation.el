@@ -194,3 +194,5 @@
     (insert ";; Scratch buffer\n\n")))
 
 (global-set-key (kbd "C-c b") 'create-scratch-buffer)
+
+(global-set-key (kbd "C-c s") 'eshell)
