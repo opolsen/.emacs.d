@@ -196,3 +196,13 @@
 (global-set-key (kbd "C-c b") 'create-scratch-buffer)
 
 (global-set-key (kbd "C-c s") 'eshell)
+
+(defun goto-line-with-feedback ()
+  (interactive)
+  (unwind-protect
+      (progn
+        (display-line-numbers-mode 1)
+        (call-interactively 'goto-line))
+    (display-line-numbers-mode -1)))
+
+(global-set-key (kbd "M-g M-g") 'goto-line-with-feedback)
