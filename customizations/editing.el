@@ -130,6 +130,9 @@
 (if (eq system-type 'darwin)
     (global-set-key (kbd "C-@") 'er/expand-region)
   (global-set-key (kbd "C-'") 'er/expand-region))
+(if (eq system-type 'darwin)
+    (global-set-key (kbd "S-C-@") 'er/contract-region)
+  (global-set-key (kbd "C-*") 'er/contract-region))
 
 ;; Quickly join next line with current line
 (global-set-key (kbd "M-j")
