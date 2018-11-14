@@ -15,3 +15,5 @@
 (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
 
 (global-set-key (kbd "C-x g") #'magit-status)
+
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)

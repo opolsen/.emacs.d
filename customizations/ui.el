@@ -95,3 +95,5 @@
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
 (setq flycheck-indication-mode nil)
+
+(global-diff-hl-mode)

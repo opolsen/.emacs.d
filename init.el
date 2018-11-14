@@ -41,6 +41,7 @@
     company-tern
     crux
     dash
+    diff-hl
     diminish
     dired-details
     doom-themes
