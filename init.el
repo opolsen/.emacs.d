@@ -44,6 +44,7 @@
     diff-hl
     diminish
     dired-details
+    dockerfile-mode
     doom-themes
     elm-mode
     ethan-wspace
@@ -168,3 +169,4 @@
 (load "setup-org.el")
 (load "setup-go.el")
 (load "setup-yaml.el")
+(load "setup-docker.el")
