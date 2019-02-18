@@ -15,7 +15,7 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
-(load-theme 'doom-tomorrow-night t)
+(load-theme 'monokai t)
 
 (set-face-attribute 'default nil :height 120 :family "Office Code Pro")
 
