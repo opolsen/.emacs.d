@@ -17,3 +17,5 @@
 (global-set-key (kbd "C-x g") #'magit-status)
 
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+
+(setq magit-section-visibility-indicator nil)
