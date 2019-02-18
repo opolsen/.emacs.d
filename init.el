@@ -86,6 +86,7 @@
     smartparens
     smex
     smooth-scroll
+    ssh-agency
     tagedit
     tern
     undo-tree
