@@ -19,3 +19,5 @@
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 (setq magit-section-visibility-indicator nil)
+
+(setenv "SSH_ASKPASS" "git-gui--askpass")
