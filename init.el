@@ -31,8 +31,6 @@
     clj-refactor
     clojure-mode
     clojure-mode-extra-font-locking
-    color-theme-sanityinc-solarized
-    color-theme-sanityinc-tomorrow
     company
     company-anaconda
     company-go
@@ -45,7 +43,6 @@
     diminish
     dired-details
     dockerfile-mode
-    doom-themes
     elm-mode
     ethan-wspace
     expand-region
@@ -69,7 +66,6 @@
     js2-mode
     js2-refactor
     json-mode
-    kaolin-themes
     magit
     monokai-theme
     move-text
