@@ -89,6 +89,7 @@
     ssh-agency
     tagedit
     tern
+    terraform-mode
     undo-tree
     vlf
     web-mode
