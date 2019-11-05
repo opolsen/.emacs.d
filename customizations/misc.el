@@ -36,3 +36,6 @@
 (add-hook 'term-mode-hook (lambda() (setq yas-dont-activate t)))
 
 (require 'vlf-setup)
+
+(if (executable-find "pandoc")
+    (setq markdown-command "pandoc"))
