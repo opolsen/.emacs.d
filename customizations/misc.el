@@ -39,3 +39,8 @@
 
 (if (executable-find "pandoc")
     (setq markdown-command "pandoc"))
+
+(defun setup-restclient-imenu()
+  (setq imenu-generic-expression '((nil "^[A-Z]+\s+.+" 0))))
+
+(add-hook 'restclient-mode-hook #'setup-restclient-imenu)
