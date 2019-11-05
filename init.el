@@ -86,6 +86,7 @@
     tagedit
     tern
     terraform-mode
+    tide
     undo-tree
     vlf
     web-mode
@@ -158,6 +159,7 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+(load "setup-ts.el")
 (load "setup-json.el")
 (load "setup-html.el")
 (load "setup-python.el")
