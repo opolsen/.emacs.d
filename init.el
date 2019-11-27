@@ -94,8 +94,7 @@
     whole-line-or-region
     yasnippet
     yaml-mode
-    zenburn-theme
-    zerodark-theme))
+    zenburn-theme))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
