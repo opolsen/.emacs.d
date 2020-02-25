@@ -171,3 +171,5 @@
 (load "setup-go.el")
 (load "setup-yaml.el")
 (load "setup-docker.el")
+
+(load "decode-jwt.el")
