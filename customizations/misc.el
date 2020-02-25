@@ -44,3 +44,5 @@
   (setq imenu-generic-expression '((nil "^[A-Z]+\s+.+" 0))))
 
 (add-hook 'restclient-mode-hook #'setup-restclient-imenu)
+
+(setq gc-cons-threshold 20000000)
