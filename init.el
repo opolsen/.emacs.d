@@ -67,10 +67,12 @@
     js2-refactor
     json-mode
     magit
+    markdown-mode
     monokai-theme
     move-text
     multiple-cursors
     nodejs-repl
+    omnisharp
     org-tree-slide
     prettier-js
     projectile
