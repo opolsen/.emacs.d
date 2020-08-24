@@ -8,3 +8,7 @@
 
 (global-set-key (kbd "<f8>") 'org-tree-slide-mode)
 (global-set-key (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+(setq org-agenda-files (list "~/org/work.org"))
+(setq org-log-done t)
