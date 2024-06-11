@@ -209,3 +209,6 @@
 
 ;; Temporary fix for projectile bug on Windows 10
 (setq projectile-git-submodule-command 'nil)
+
+;; Enable winner-mode. Enables undoing window changes.
+(winner-mode 1)
