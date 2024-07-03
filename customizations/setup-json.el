@@ -9,3 +9,7 @@
   (json-mode))
 
 (global-set-key (kbd "C-c j") 'create-json-buffer)
+
+;; Filter content of json files using jq
+(with-eval-after-load "json-mode"
+  (define-key json-mode-map (kbd "C-c C-j") #'jq-interactively))

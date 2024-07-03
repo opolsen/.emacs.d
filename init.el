@@ -66,6 +66,7 @@
     js2-mode
     js2-refactor
     json-mode
+    jq-mode
     magit
     markdown-mode
     monokai-theme
