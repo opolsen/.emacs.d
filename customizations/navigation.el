@@ -172,7 +172,7 @@
 (global-set-key (kbd "C-S-k") #'crux-kill-whole-line)
 
 ;; Kill current buffer without asking
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x k") 'kill-current-buffer)
 
 ;; Nice interactive way to search for pattern in project
 (define-key projectile-mode-map (kbd "C-c p n") 'helm-projectile-grep)
