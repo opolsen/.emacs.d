@@ -226,9 +226,4 @@
 
 (global-set-key (kbd "M-w") 'whole-line-or-region-kill-ring-save)
 
-(require 'dired-details)
-(setq-default dired-details-hidden-string "--- ")
-(dired-details-install)
-(setq dired-dwim-targete t)
-
 (global-undo-tree-mode)

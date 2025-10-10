@@ -33,36 +33,26 @@
     clojure-mode-extra-font-locking
     company
     company-anaconda
-    company-go
     company-quickhelp
-    company-racer
-    company-tern
     crux
     dash
     diff-hl
     diminish
-    dired-details
     dockerfile-mode
-    elm-mode
     ethan-wspace
     expand-region
     flx-ido
     flycheck
     flycheck-clojure
-    flycheck-elm
     flycheck-joker
     flycheck-pos-tip
-    flycheck-rust
     git-timemachine
-    go-eldoc
-    go-mode
     helm
     helm-projectile
     hydra
     ido-at-point
     ido-completing-read+
     ido-vertical-mode
-    indium
     js2-mode
     js2-refactor
     json-mode
@@ -72,16 +62,10 @@
     monokai-theme
     move-text
     multiple-cursors
-    nodejs-repl
-    omnisharp
     org-tree-slide
-    prettier-js
     projectile
-    racer
     rainbow-delimiters
     restclient
-    rjsx-mode
-    rust-mode
     smartparens
     smex
     smooth-scroll
@@ -96,8 +80,7 @@
     which-key
     whole-line-or-region
     yasnippet
-    yaml-mode
-    zenburn-theme))
+    yaml-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -165,11 +148,8 @@
 (load "setup-json.el")
 (load "setup-html.el")
 (load "setup-python.el")
-(load "setup-rust.el")
 (load "setup-xml.el")
-(load "setup-elm.el")
 (load "setup-org.el")
-(load "setup-go.el")
 (load "setup-yaml.el")
 (load "setup-docker.el")
 

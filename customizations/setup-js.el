@@ -1,5 +1,3 @@
-(require 'company-tern)
-
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 
@@ -7,7 +5,6 @@
   (smartparens-mode)
   (tern-mode)
   (company-mode)
-  (add-to-list 'company-backends 'company-tern)
   (when (executable-find "eslint")
     (flycheck-mode t)
     (flycheck-select-checker 'javascript-eslint)))
