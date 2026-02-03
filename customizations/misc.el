@@ -46,3 +46,5 @@
 (add-hook 'restclient-mode-hook #'setup-restclient-imenu)
 
 (setq gc-cons-threshold 20000000)
+
+(setq imenu-max-item-length 80)
