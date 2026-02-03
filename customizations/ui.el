@@ -17,7 +17,7 @@
 
 (load-theme 'monokai t)
 
-(set-face-attribute 'default nil :height 120 :family "Office Code Pro")
+(set-face-attribute 'default nil :height 120 :family "Fira Code")
 
 (if (eq system-type 'darwin)
     (set-face-attribute 'default nil :height 120))
