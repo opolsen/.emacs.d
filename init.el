@@ -51,8 +51,6 @@
     ido-at-point
     ido-completing-read+
     ido-vertical-mode
-    js2-mode
-    js2-refactor
     json-mode
     jq-mode
     magit
@@ -69,12 +67,10 @@
     smooth-scroll
     ssh-agency
     tagedit
-    tern
     terraform-mode
     tide
     undo-tree
     vlf
-    web-mode
     which-key
     whole-line-or-region
     yasnippet
