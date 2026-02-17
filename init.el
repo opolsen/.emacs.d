@@ -71,5 +71,6 @@
 (load "setup-yaml.el")
 (load "setup-docker.el")
 
+(load "setup-terraform.el")
 (load "decode-jwt.el")
 (load "setup-markdown.el")
