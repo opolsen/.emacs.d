@@ -72,3 +72,4 @@
 (load "setup-docker.el")
 
 (load "decode-jwt.el")
+(load "setup-markdown.el")
