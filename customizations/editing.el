@@ -26,9 +26,11 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
-;; Show number of current and total matches when searching
-(require 'anzu)
-(global-anzu-mode 1)
+;; Anzu — show match count in search
+(use-package anzu
+  :diminish anzu-mode
+  :config
+  (global-anzu-mode 1))
 
 (define-key isearch-mode-map (kbd "C-c C-o") 'isearch-occur)
 
@@ -58,8 +60,9 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 
-;; yay rainbows!
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+;; Rainbow delimiters in all programming modes
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
 
 ;; fix weird os x kill error
 (defun ns-get-pasteboard ()
@@ -73,19 +76,14 @@
 ;; Delete region when typing
 (delete-selection-mode 1)
 
-(require 'yasnippet)
-(yas-global-mode 1)
-;; Only use local snippets for now
-(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
-
 ;; Expansions
 (global-set-key (kbd "C-,") 'completion-at-point)
 (global-set-key (kbd "C-.") 'hippie-expand)
 
-;; Enable move-text
-(require 'move-text)
-(global-set-key (kbd "C-S-<up>") 'move-text-up)
-(global-set-key (kbd "C-S-<down>") 'move-text-down)
+;; Move-text — move lines/regions up/down
+(use-package move-text
+  :bind (("C-S-<up>"   . move-text-up)
+         ("C-S-<down>" . move-text-down)))
 
 ;; Keybinding for occur
 (global-set-key (kbd "C-c o") 'occur)
@@ -95,9 +93,13 @@
 
 ;; Keep the whitespace clean
 (setq mode-require-final-newline nil)
-(require 'ethan-wspace)
-(global-ethan-wspace-mode 1)
-(global-set-key (kbd "C-c w") 'ethan-wspace-clean-all)
+
+;; Ethan-wspace — whitespace cleanup
+(use-package ethan-wspace
+  :diminish
+  :bind ("C-c w" . ethan-wspace-clean-all)
+  :config
+  (global-ethan-wspace-mode 1))
 
 (defun indent-buffer ()
   (interactive)
@@ -107,32 +109,30 @@
 ;; Automatically update unmodified buffers whose files have changed.
 (global-auto-revert-mode 1)
 
-;; Keybindings for multiple-cursors
-(global-set-key (kbd "C-æ") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-å") 'mc/mark-previous-like-this)
-(global-set-key (kbd "M-æ") 'mc/mark-all-like-this)
-(global-set-key (kbd "C-M-æ") 'mc/mark-all-in-region)
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
-(global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
+;; Multiple-cursors
+(use-package multiple-cursors
+  :bind (("C-æ"       . mc/mark-next-like-this)
+         ("C-å"       . mc/mark-previous-like-this)
+         ("M-æ"       . mc/mark-all-like-this)
+         ("C-M-æ"     . mc/mark-all-in-region)
+         ("C-S-c C-S-c" . mc/edit-lines)
+         ("C-S-c C-e" . mc/edit-ends-of-lines)
+         ("C-S-c C-a" . mc/edit-beginnings-of-lines)))
 
-;; Setup avy
-(require 'avy)
-(define-key global-map (kbd "C-ø") 'avy-goto-word-or-subword-1)
-(define-key global-map (kbd "C-Ø") 'avy-goto-char-timer)
-(define-key global-map (kbd "C-M-ø") 'avy-goto-line)
-(define-key isearch-mode-map (kbd "C-ø") 'avy-isearch)
+;; Avy — jump to visible text
+(use-package avy
+  :bind (("C-ø"     . avy-goto-word-or-subword-1)
+         ("C-Ø"     . avy-goto-char-timer)
+         ("C-M-ø"   . avy-goto-line)
+         :map isearch-mode-map
+         ("C-ø"     . avy-isearch))
+  :config
+  (setq avy-background t))
 
-(setq avy-background t)
-
-;; Setup expand-region
-(require 'expand-region)
-(if (eq system-type 'darwin)
-    (global-set-key (kbd "C-@") 'er/expand-region)
-  (global-set-key (kbd "C-'") 'er/expand-region))
-(if (eq system-type 'darwin)
-    (global-set-key (kbd "S-C-@") 'er/contract-region)
-  (global-set-key (kbd "C-*") 'er/contract-region))
+;; Expand-region — expand selection semantically
+(use-package expand-region
+  :bind (("C-'" . er/expand-region)
+         ("C-*" . er/contract-region)))
 
 ;; Quickly join next line with current line
 (global-set-key (kbd "M-j")
@@ -209,21 +209,36 @@
 
 (global-set-key (kbd "M-i") 'ido-goto-symbol)
 
-;; Default smartparens configuration
-(require 'smartparens-config)
+;; Smartparens — structural editing for all languages
+(use-package smartparens
+  :diminish
+  :defer t
+  :bind (:map smartparens-mode-map
+              ("C-<right>"   . sp-forward-slurp-sexp)
+              ("C-<left>"    . sp-forward-barf-sexp)
+              ("C-M-<left>"  . sp-backward-slurp-sexp)
+              ("C-M-<right>" . sp-backward-barf-sexp)
+              ("M-r"         . sp-rewrap-sexp)
+              ("C-k"         . sp-kill-hybrid-sexp)
+              ("C-M-w"       . sp-copy-sexp))
+  :config
+  (require 'smartparens-config)
+  (sp-use-paredit-bindings)
+  (setq sp-highlight-pair-overlay nil))
 
-(sp-use-paredit-bindings)
+;; Whole-line-or-region
+(use-package whole-line-or-region
+  :bind ("M-w" . whole-line-or-region-kill-ring-save))
 
-;; Smartparens keybindings.
-;; Mostly taken from the author: https://github.com/Fuco1/.emacs.d/blob/master/files/smartparens.el
-(define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
-(define-key smartparens-mode-map (kbd "C-<left>") 'sp-forward-barf-sexp)
-(define-key smartparens-mode-map (kbd "C-M-<left>") 'sp-backward-slurp-sexp)
-(define-key smartparens-mode-map (kbd "C-M-<right>") 'sp-backward-barf-sexp)
-(define-key smartparens-mode-map (kbd "M-r") 'sp-rewrap-sexp)
-(define-key smartparens-mode-map (kbd "C-k") 'sp-kill-hybrid-sexp)
-(define-key smartparens-mode-map (kbd "C-M-w") 'sp-copy-sexp)
+;; Undo-tree — visualize undo history
+(use-package undo-tree
+  :diminish
+  :defer t
+  :config
+  (global-undo-tree-mode)
+  (setq undo-tree-history-directory-alist
+        `(("." . ,(expand-file-name "undo-tree-history" user-emacs-directory)))))
 
-(global-set-key (kbd "M-w") 'whole-line-or-region-kill-ring-save)
-
-(global-undo-tree-mode)
+;; Browse-kill-ring
+(use-package browse-kill-ring
+  :defer t)

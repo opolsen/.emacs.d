@@ -31,19 +31,22 @@
 
 (setq tramp-default-method "ssh")
 
-(add-to-list 'auto-mode-alist '("\\.rest$" . restclient-mode))
-
 (add-hook 'term-mode-hook (lambda() (setq yas-dont-activate t)))
 
-(require 'vlf-setup)
+;; VLF — view large files
+(use-package vlf
+  :defer t
+  :config
+  (require 'vlf-setup))
 
 (if (executable-find "pandoc")
     (setq markdown-command "pandoc"))
 
-(defun setup-restclient-imenu()
+;; Restclient
+(use-package restclient
+  :mode ("\\.rest$" . restclient-mode)
+  :config
   (setq imenu-generic-expression '((nil "^[A-Z]+\s+.+" 0))))
-
-(add-hook 'restclient-mode-hook #'setup-restclient-imenu)
 
 (setq gc-cons-threshold 20000000)
 

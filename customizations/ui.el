@@ -15,7 +15,10 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
-(load-theme 'monokai t)
+(use-package monokai-theme
+  :ensure t
+  :config
+  (load-theme 'monokai t))
 
 (set-face-attribute 'default nil :height 120 :family "Fira Code")
 
@@ -57,13 +60,6 @@
 ;; Always start emacs in fullscreen
 (set-frame-parameter nil 'fullscreen 'maximized)
 
-(defmacro rename-modeline (package-name mode new-name)
-  `(eval-after-load ,package-name
-     '(defadvice ,mode (after rename-modeline activate)
-        (setq mode-name ,new-name))))
-
-(rename-modeline "js2-mode" js2-mode "JS2")
-
 ;; Prevent smartparens overlay, since it makes content unreadable with current color scheme
 (setq sp-highlight-pair-overlay nil)
 
@@ -76,6 +72,14 @@
 
 ;; Prevent line breaking
 (setq-default truncate-lines t)
+
+;; Diminish — hide minor modes from modeline
+(use-package diminish
+  :ensure t
+  :config
+  (diminish 'subword-mode)
+  (diminish 'eldoc-mode)
+  (diminish 'auto-revert-mode))
 
 ;; Cleanup modeline
 (require 'diminish)
@@ -90,10 +94,11 @@
 (eval-after-load "company" '(diminish 'company-mode))
 (eval-after-load "autorevert" '(diminish 'auto-revert-mode))
 (eval-after-load "git-gutter" '(diminish 'git-gutter-mode))
-(eval-after-load "anzu" '(diminish 'anzu-mode))
 
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
 (setq flycheck-indication-mode nil)
 
-(global-diff-hl-mode)
+(use-package diff-hl
+  :config
+  (global-diff-hl-mode))

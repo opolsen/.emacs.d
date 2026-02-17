@@ -26,59 +26,63 @@
 ;; name, ido will narrow down the list of buffers to match the text
 ;; you've typed in
 ;; http://www.emacswiki.org/emacs/InteractivelyDoThings
-(ido-mode t)
+(use-package ido
+  :ensure nil
+  :config
+  (ido-mode t)
+  (setq ido-enable-flex-matching t
+        ido-use-filename-at-point nil
+        ido-auto-merge-work-directories-length -1
+        ido-use-virtual-buffers t
+        ido-enable-flex-matching t
+        ido-use-filename-at-point nil
+        ido-auto-merge-work-directories-length -1
+        ido-use-virtual-buffers t))
 
-;; This allows partial matches, e.g. "tl" will match "Tyrion Lannister"
-(setq ido-enable-flex-matching t)
+(use-package flx-ido
+  :after ido
+  :config
+  (flx-ido-mode +1))
 
-;;; smarter fuzzy matching for ido
-(flx-ido-mode +1)
+(use-package ido-completing-read+
+  :after ido
+  :config
+  (ido-ubiquitous-mode 1))
 
-;; Turn this behavior off because it's annoying
-(setq ido-use-filename-at-point nil)
+(use-package ido-vertical-mode
+  :after ido
+  :config
+  (ido-vertical-mode 1))
 
-;; Don't try to match file across all "work" directories; only match files
-;; in the current directory displayed in the minibuffer
-(setq ido-auto-merge-work-directories-length -1)
-
-;; Includes buffer names of recently open files, even if they're not
-;; open now
-(setq ido-use-virtual-buffers t)
-
-;; This enables ido in all contexts where it could be useful, not just
-;; for selecting buffer and file names
-(require 'ido-completing-read+)
-(ido-ubiquitous-mode 1)
-
-;; Show results vertically
-(require 'ido-vertical-mode)
-(ido-vertical-mode 1)
-
-;; Use ido for completion-at-point
-(require 'ido-at-point)
-(ido-at-point-mode)
+(use-package ido-at-point
+  :after ido
+  :config
+  (ido-at-point-mode))
 
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; Smex — better M-x
+(use-package smex
+  :bind (("M-x" . smex)
+         ("M-X" . smex-major-mode-commands))
+  :config
+  (setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
+  (smex-initialize))
 
-;; Enhances M-x to allow easier execution of commands. Provides
-;; a filterable list of possible commands in the minibuffer
-;; http://www.emacswiki.org/emacs/Smex
-(setq smex-save-file (concat user-emacs-directory ".smex-items"))
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-
-;; projectile everywhere!
-(projectile-global-mode)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(setq projectile-globally-ignored-directories
-      (append '("node_modules" "target" ".tmp" "dist" ".cljs_rhino_repl")
-              projectile-globally-ignored-directories))
-(setq projectile-use-git-grep t)
-(setq projectile-enable-caching nil)
-(setq projectile-indexing-method 'alien)
+;; Projectile — project management
+(use-package projectile
+  :diminish
+  :bind-keymap ("C-c p" . projectile-command-map)
+  :config
+  (projectile-global-mode)
+  (setq projectile-globally-ignored-directories
+        (append '("node_modules" "target" ".tmp" "dist" ".cljs_rhino_repl")
+                projectile-globally-ignored-directories)
+        projectile-use-git-grep t
+        projectile-enable-caching nil
+        projectile-indexing-method 'alien
+        projectile-git-submodule-command nil))
 
 ;; Require this package in order to be able to visit all marked files in dired mode
 (require 'dired-x)
@@ -118,9 +122,12 @@
                   (ignore-errors (backward-char 5))))
 
 
-;; Displays the available key bindings after opening sequence
-(require 'which-key)
-(which-key-mode)
+;; Which-key — display available keybindings
+(use-package which-key
+  :diminish
+  :defer 1
+  :config
+  (which-key-mode))
 
 ;; Try to get a bit smoother scrolling
 (setq scroll-margin 0
@@ -164,18 +171,26 @@
 (global-set-key (kbd "<home>") 'smart-beginning-of-line)
 (global-set-key (kbd "C-a") 'smart-beginning-of-line)
 
-(require 'crux)
-(global-set-key (kbd "C-x 4 t") #'crux-transpose-windows)
-(global-set-key (kbd "C-c D") #'crux-delete-file-and-buffer)
-(global-set-key (kbd "C-c r") #'crux-rename-file-and-buffer)
-(global-set-key (kbd "C-c d") #'crux-duplicate-current-line-or-region)
-(global-set-key (kbd "C-S-k") #'crux-kill-whole-line)
+;; Crux — useful interactive commands
+(use-package crux
+  :bind (("C-x 4 t" . crux-transpose-windows)
+         ("C-c D"   . crux-delete-file-and-buffer)
+         ("C-c r"   . crux-rename-file-and-buffer)
+         ("C-c d"   . crux-duplicate-current-line-or-region)
+         ("C-S-k"   . crux-kill-whole-line)
+         ("C-c e"   . crux-eval-and-replace)))
 
 ;; Kill current buffer without asking
 (global-set-key (kbd "C-x k") 'kill-current-buffer)
 
-;; Nice interactive way to search for pattern in project
-(define-key projectile-mode-map (kbd "C-c p n") 'helm-projectile-grep)
+(use-package helm
+  :defer nil)
+
+(use-package helm-projectile
+  :after (helm projectile)
+  :bind (:map projectile-mode-map
+              ;; Nice interactive way to search for pattern in project
+              ("C-c p n" . helm-projectile-grep)))
 
 (global-subword-mode 1)
 

@@ -1,3 +1,3 @@
-(require 'dockerfile-mode)
-
-(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+(use-package dockerfile-mode
+  :defer t
+  :mode "Dockerfile\\'")
