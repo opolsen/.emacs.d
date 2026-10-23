@@ -20,51 +20,15 @@
 (setq recentf-max-menu-items 40)
 
 
-;; ido-mode allows you to more easily navigate choices. For example,
-;; when you want to switch buffers, ido presents you with a list
-;; of buffers in the the mini-buffer. As you start to type a buffer's
-;; name, ido will narrow down the list of buffers to match the text
-;; you've typed in
-;; http://www.emacswiki.org/emacs/InteractivelyDoThings
-(use-package ido
-  :ensure nil
-  :config
-  (ido-mode t)
-  (setq ido-enable-flex-matching t
-        ido-use-filename-at-point nil
-        ido-auto-merge-work-directories-length -1
-        ido-use-virtual-buffers t))
-
-(use-package flx-ido
-  :after ido
-  :config
-  (flx-ido-mode +1))
-
-(use-package ido-completing-read+
-  :after ido
-  :config
-  (ido-ubiquitous-mode 1))
-
-(use-package ido-vertical-mode
-  :after ido
-  :config
-  (ido-vertical-mode 1))
-
-(use-package ido-at-point
-  :after ido
-  :config
-  (ido-at-point-mode))
+;; Built-in vertical completion (icomplete + ido-style keys) for the
+;; minibuffer, including M-x, buffer and file switching.
+(fido-vertical-mode 1)
+(setq read-file-name-completion-ignore-case t
+      read-buffer-completion-ignore-case t
+      completion-ignore-case t)
 
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-
-;; Smex — better M-x
-(use-package smex
-  :bind (("M-x" . smex)
-         ("M-X" . smex-major-mode-commands))
-  :config
-  (setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
-  (smex-initialize))
 
 ;; Projectile — project management
 (use-package projectile
@@ -137,19 +101,12 @@
 
 ;; get rid of `find-file-read-only' and replace it with something
 ;; more useful.
-(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+(global-set-key (kbd "C-x C-r") 'recentf-open)
 
 ; 50 files ought to be enough.
 (setq recentf-max-saved-items 50)
 
-(defun ido-recentf-open ()
-  "Use `ido-completing-read' to \\[find-file] a recent file"
-  (interactive)
-  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
-      (message "Opening file...")
-    (message "Aborting")))
-
-(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+(global-set-key (kbd "C-x M-f") 'find-file-other-window)
 
 ;; Smart home key.
 (defun smart-beginning-of-line ()
@@ -174,14 +131,10 @@
 ;; Kill current buffer without asking
 (global-set-key (kbd "C-x k") 'kill-current-buffer)
 
-(use-package helm
-  :defer nil)
+(with-eval-after-load 'projectile
+  (define-key projectile-mode-map (kbd "C-c p n") #'projectile-grep))
 
-(use-package helm-projectile
-  :after (helm projectile)
-  :bind (:map projectile-mode-map
-              ;; Nice interactive way to search for pattern in project
-              ("C-c p n" . helm-projectile-grep)))
+(global-set-key (kbd "M-i") 'imenu)
 
 (global-subword-mode 1)
 
