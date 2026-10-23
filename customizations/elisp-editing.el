@@ -5,12 +5,4 @@
 (add-hook 'lisp-interaction-mode-hook #'smartparens-mode)
 (add-hook 'scheme-mode-hook           #'smartparens-mode)
 
-;; eldoc-mode shows documentation in the minibuffer when writing code
-;; http://www.emacswiki.org/emacs/ElDoc
-(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
-
 (global-set-key (kbd "C-c C-k") 'eval-buffer)
-(require 'crux)
-(global-set-key (kbd "C-c e") #'crux-eval-and-replace)

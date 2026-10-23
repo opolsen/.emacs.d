@@ -2,7 +2,7 @@
 (prefer-coding-system 'utf-8)
 
 ;; Changes all yes/no questions to y/n type
-(fset 'yes-or-no-p 'y-or-n-p)
+(setq use-short-answers t)
 
 ;; shell scripts
 (setq-default sh-basic-offset 2)
@@ -15,8 +15,7 @@
 (setq inhibit-startup-message t)
 
 (setq mac-option-modifier 'super
-      mac-command-modifier 'meta
-      x-select-enable-clipboard t)
+      mac-command-modifier 'meta)
 
 ;; Norwegian mac-keyboard alt-keys
 (define-key key-translation-map (kbd "s-8") (kbd "["))
@@ -38,9 +37,6 @@
   :defer t
   :config
   (require 'vlf-setup))
-
-(if (executable-find "pandoc")
-    (setq markdown-command "pandoc"))
 
 ;; Restclient
 (use-package restclient
