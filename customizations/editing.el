@@ -70,7 +70,7 @@
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
 
-(setq electric-indent-mode nil)
+(electric-indent-mode -1)
 
 ;; Delete region when typing
 (delete-selection-mode 1)
