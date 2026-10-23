@@ -40,7 +40,6 @@
    '(("#3C3D37" . 0) ("#679A01" . 20) ("#4BBEAE" . 30) ("#1DB4D0" . 50)
      ("#9A8F21" . 60) ("#A75B00" . 70) ("#F309DF" . 85)
      ("#3C3D37" . 100)))
- '(magit-diff-use-overlays nil)
  '(org-agenda-files nil)
  '(package-selected-packages nil)
  '(pos-tip-background-color "#FFFACE")

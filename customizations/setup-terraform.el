@@ -1,4 +1,3 @@
 (use-package terraform-mode
   :defer t
-  :config
-  (terraform-format-on-save-mode 1))
+  :hook (terraform-mode . terraform-format-on-save-mode))
