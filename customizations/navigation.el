@@ -75,7 +75,7 @@
   :diminish
   :bind-keymap ("C-c p" . projectile-command-map)
   :config
-  (projectile-global-mode)
+  (projectile-mode 1)
   (setq projectile-globally-ignored-directories
         (append '("node_modules" "target" ".tmp" "dist" ".cljs_rhino_repl")
                 projectile-globally-ignored-directories)
@@ -221,9 +221,6 @@
     (display-line-numbers-mode -1)))
 
 (global-set-key (kbd "M-g M-g") 'goto-line-with-feedback)
-
-;; Temporary fix for projectile bug on Windows 10
-(setq projectile-git-submodule-command 'nil)
 
 ;; Enable winner-mode. Enables undoing window changes.
 (winner-mode 1)
