@@ -42,7 +42,6 @@
      move-text
      multiple-cursors
      org-tree-slide
-     projectile
      rainbow-delimiters
      restclient
      smartparens

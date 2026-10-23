@@ -30,19 +30,11 @@
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;; Projectile — project management
-(use-package projectile
-  :diminish
-  :bind-keymap ("C-c p" . projectile-command-map)
-  :config
-  (projectile-mode 1)
-  (setq projectile-globally-ignored-directories
-        (append '("node_modules" "target" ".tmp" "dist" ".cljs_rhino_repl")
-                projectile-globally-ignored-directories)
-        projectile-use-git-grep t
-        projectile-enable-caching nil
-        projectile-indexing-method 'alien
-        projectile-git-submodule-command nil))
+;; Project management: built-in project.el (C-x p prefix)
+(setq project-switch-commands '((project-find-file "Find file")
+                                (project-find-regexp "Find regexp")
+                                (project-dired "Dired")
+                                (magit-project-status "Magit" ?m)))
 
 ;; Require this package in order to be able to visit all marked files in dired mode
 (require 'dired-x)
@@ -131,8 +123,7 @@
 ;; Kill current buffer without asking
 (global-set-key (kbd "C-x k") 'kill-current-buffer)
 
-(with-eval-after-load 'projectile
-  (define-key projectile-mode-map (kbd "C-c p n") #'projectile-grep))
+(global-set-key (kbd "C-c p n") #'project-find-regexp)
 
 (global-set-key (kbd "M-i") 'imenu)
 
