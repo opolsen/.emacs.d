@@ -15,10 +15,7 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
-(use-package monokai-theme
-  :ensure t
-  :config
-  (load-theme 'monokai t))
+(load-theme 'modus-vivendi t)
 
 (set-face-attribute 'default nil :height 120 :family "Fira Code")
 
