@@ -45,8 +45,9 @@
 ;; Restclient
 (use-package restclient
   :mode ("\\.rest$" . restclient-mode)
-  :config
-  (setq imenu-generic-expression '((nil "^[A-Z]+\s+.+" 0))))
+  :hook (restclient-mode . (lambda ()
+                             (setq-local imenu-generic-expression
+                                         '((nil "^[A-Z]+\s+.+" 0))))))
 
 (setq gc-cons-threshold 20000000)
 
