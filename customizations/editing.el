@@ -233,7 +233,6 @@
 ;; Undo-tree — visualize undo history
 (use-package undo-tree
   :diminish
-  :defer t
   :config
   (global-undo-tree-mode)
   (setq undo-tree-history-directory-alist
