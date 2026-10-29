@@ -86,12 +86,17 @@
 ;; Keep the whitespace clean
 (setq mode-require-final-newline nil)
 
-;; Ethan-wspace — whitespace cleanup
-(use-package ethan-wspace
+;; Whitespace cleanup (only on buffers that were clean when opened)
+(use-package whitespace-cleanup-mode
+  :ensure t
   :diminish
-  :bind ("C-c w" . ethan-wspace-clean-all)
+  :bind ("C-c w" . whitespace-cleanup)
+  :init
+  (setq whitespace-style '(face trailing empty tabs))
   :config
-  (global-ethan-wspace-mode 1))
+  (global-whitespace-cleanup-mode 1))
+
+(setq-default show-trailing-whitespace t)
 
 (defun indent-buffer ()
   (interactive)

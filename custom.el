@@ -32,7 +32,7 @@
      diff-hl
      diminish
      dockerfile-mode
-     ethan-wspace
+     whitespace-cleanup-mode
      exec-path-from-shell
      expand-region
      jq-mode
